@@ -1,0 +1,73 @@
+
+
+@mixin flex_center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin space_between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin animation($delay, $duration, $name) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $name;
+}
+
+@mixin keyframe($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin scrollbar($direction) {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    @if $direction == 'H' { height: 6px; } @else { width: 6px; }
+    display: inline;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @if $direction == 'H' { height: 6px; } @else { width: 6px; }
+    border-radius: 6px;
+    background: #b6bdc1;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin toolbar_images {
+  $strnum : "";
+  @for $i from 1 to 20{    
+    @if ($i < 10) { $strnum : 0#{$i}; }
+    @else {$strnum : #{$i};}
+    li:nth-child(#{$i+1}){
+      img {
+        content:url(../assets/ic_menu_#{$strnum}@2x.png);
+      }      
+    }
+  }
+}

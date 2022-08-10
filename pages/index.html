@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FISS</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="top-area">
+      <ul class="gnb toolbar">
+        <li><img src="../assets/CI@2x.png" alt=""></li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="로그아웃">
+            <button type="button"><img src="" alt=""></button>
+          </div>          
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="조회">
+            <button type="button" class="modal-open btn-msearch"><img src="" alt=""></button>
+          </div>          
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="입력">
+            <button type="button"><img src="" alt=""></button>
+          </div>   
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="지도">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="NMS">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="포인트">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="편집">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="삭제">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="선번장">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="이력관리">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="사업관리">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="환경설정">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="리포트">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="즐겨찾기">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="인쇄">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="저장">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="거리">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li>
+          <div class="tooltip-bottom" data-tooltip="도움말">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>        
+        <li>
+          <div class="tooltip-bottom" data-tooltip="위치">
+            <button type="button"><img src="" alt=""></button>
+          </div> 
+        </li>
+      </ul>
+      <ul class="gnb-nav toolbar">
+        <li class="prev">
+          <div class="tooltip-bottom" data-tooltip="이전">
+            <button type="button"><img src="" alt=""></button>
+          </div>
+        </li>
+        <li class="next">
+          <div class="tooltip-bottom next" data-tooltip="다음">
+            <button type="button"><img src="" alt=""></button>
+          </div>
+        </li>
+      </ul>
+    </div>    
+    <div id="left-area">      
+      <div class="left-area-box toolbox">
+
+      </div>      
+      <div class="right-area"></div>
+    </div>    
+    <div class="toolbar bottom-bar">        
+      <ul id="ticker">
+        <li><a href="#"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00  110 CCTV </a></li>
+        <li><a href="#">[중증장애] 2021-07-21 00:00:00 110 133</a></li>
+        <li><a href="#">[중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
+        <li><a href="#"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
+      </ul>
+    </div>
+    <!-- <div class="map_stage_bg"> -->
+      <!--버스-->
+      <div class="icon_area" style="top:200px;left:800px;">
+        <div class="icon-bus line-4core">버스</div>        
+      </div>
+      <!--//버스-->
+      <!--traffic-->
+      <div class="icon_area" style="top:200px;left:1200px;">
+        <div class="icon-traffic line-36core">버스</div>
+      </div>
+      <!--//traffic-->
+      <div class="icon_area" style="top:400px;left:1200px;">
+        <div class="icon-cctv line-36core">버스</div>
+      </div>
+      <div class="map_bg">
+        
+      </div>
+    <!-- </div> -->
+  </div>
+  
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>
+  <script src="../../scripts/script.js"></script>
+  <script>      
+    tickerover();      
+    ticker();    
+    
+    //조회
+    $(".btn-msearch").on("click",function(){
+      loadLeft("search");
+      loadEvent();
+    })
+
+    
+  
+
+  </script>
+</body>
+</html>
