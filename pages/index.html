@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FISS</title>
   <link rel="stylesheet" href="../css/style.css">
@@ -44,7 +44,7 @@
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="편집">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="modal-open btn-medit"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
@@ -125,8 +125,66 @@
       <div class="left-area-box toolbox">
 
       </div>      
-      <div class="right-area"></div>
     </div>    
+    <div id="right-area">
+      <div class="right-area-box toolbox">
+        <!-- 입력->관련자료->등록 -->
+        <div class="modal-register">
+          <div class="modal-top">
+            <div class="box-title">등록</div>
+            <div class="ic-modal-close close"></div>
+          </div>
+          <div class="modal-body">
+            <div class="content-info">
+              <div class="sub-title">
+                <h2>기본정보</h2>
+              </div>
+              <div class="content-edit-wrap">
+                <div class="row">
+                  <div class="row-title">등록일시</div>
+                  <div class="row-content">
+                    <input type="date" name="" id="" value="2022-08-10">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">사용자</div>
+                  <div class="row-content">
+                    <input type="text" value />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">분류</div>
+                  <div class="row-content">
+                    <div class="select-wrap">
+                      <select name="" id="">
+                        <option value="">준공도서</option>
+                        <option value="">준공도서</option>
+                        <option value="">준공도서</option>
+                        <option value="">준공도서</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">첨부파일</div>
+                  <div class="row-content">
+                    <div class="filebox"> 
+                      <input class="upload-name" value="" disabled="disabled" placeholder="선택된 파일이 없습니다"> 
+                      <label for="ex_filename">파일선택</label> 
+                      <input type="file" id="ex_filename" class="upload-hidden"> 
+                    </div>   
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="button-group">
+            <button class="btn-white">취소</button>
+            <button class="btn-common">저장</button>
+          </div>
+        </div>
+      </div>    
+    </div>
     <div class="toolbar bottom-bar">        
       <ul id="ticker">
         <li><a href="#"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00  110 CCTV </a></li>
@@ -167,7 +225,13 @@
       loadLeft("search");
       loadEvent();
     })
-
+    //입력
+    $(".btn-medit").on("click",function(){
+      // 함체-editStandard, BIT-editBit, CCTV-editCctv, 신호제어기-editTraffic, TR-editTR, 맨홀-editManhole,
+      // 전주-editPole, 국사-editTelephone, 통신선로-edit4core, 전기선로-editElcore, 관로-editHole    
+      loadLeft("editStandard");
+      loadEvent();
+    })
     
   
 

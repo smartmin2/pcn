@@ -55,9 +55,10 @@ function loadLeft(sName){
     $(".close").on("click",function(){            
       // if ($("#modal-background2").css("display") == "block") return;            
       // $("#modal-background").fadeOut(300);
-      $(".modal-con").fadeOut(300);  
-      $('body').css('overflow', 'overlay');   
-      $('#left-area').hide();         
+      // $(".modal-con").fadeOut(300);  
+      // $('body').css('overflow', 'overlay');         
+      $(this).parents("#left-area").hide();
+      $(this).parents("#right-area").hide();
     })
 
     loadEvent();
@@ -68,9 +69,7 @@ function loadLeft(sName){
 // modal Event
 function loadEvent() {
   // modal-search
-  $("ul.tab-box li").on("click",function(){  
-    $(this).addClass('active').siblings().removeClass('active');
-
+  $(".modal-search ul.tab-box li").on("click",function(){    
     var idx = $(this).index();
     
     $('.modal-search ul.result-list li').each(function (index, item) {
@@ -84,15 +83,32 @@ function loadEvent() {
     $(".modal-search .result-box").css("display","block");
     $(".modal-search .no-data").removeClass("active");
   })
+  
+  // modal-edit  
+  $(".modal-edit .btn-add").on("click", function(){    
+      $('#right-area').show();      
+      $('.modal-register').show();
+      // $("body").css("overflow", "hidden");       
+  })
 
+  $(".tab-box .tab-menu").on("click",function () {
+    const tabId = $(this).attr("data-tab"); 
+    
+    $("#" + tabId).addClass("active").siblings().removeClass('active');
+  });
+
+  //common
   $(".ic-bookmark").on("click",function(){
     $(this).toggleClass("on");
+  })
+  $("ul.tab-box li").on("click",function(){  
+    $(this).addClass('active').siblings().removeClass('active');
   })
 }
 
 function loadRight(sName){
-  $('#right-wrap').load('../'+sName+'.html .modal-'+sName,function(){
-    $('#right-wrap').show();
+  $('#right-area .right-area-box').load('../'+sName+'.html .modal-'+sName,function(){
+    $('#right-area').show();
     // $("#modal-background").fadeIn(100);   
     $('.modal-'+sName).show();
     $("body").css("overflow", "hidden");   
@@ -102,7 +118,7 @@ function loadRight(sName){
       // $("#modal-background").fadeOut(300);
       $(".modal-con").fadeOut(300);  
       $('body').css('overflow', 'overlay');   
-      $('#right-wrap').hide();         
+      $('#right-area').hide();         
     })
   });      
   return false;          
@@ -145,3 +161,17 @@ function tickerover() {
 
 
 //--------------------------------------------------------
+
+var fileTarget = $('.filebox .upload-hidden'); fileTarget.on('change', function(){ 
+  // 값이 변경되면 
+  if(window.FileReader){ 
+    // modern browser 
+    var filename = $(this)[0].files[0].name; 
+  } else { 
+      // old IE 
+      var filename = $(this).val().split('/').pop().split('\\').pop(); 
+      // 파일명만 추출 
+    } 
+    // 추출한 파일명 삽입 
+    $(this).siblings('.upload-name').val(filename); 
+  });

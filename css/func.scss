@@ -68,6 +68,25 @@
       img {
         content:url(../assets/ic_menu_#{$strnum}@2x.png);
       }      
-    }
+      &.active,&:hover {
+        img {
+          content:url(../assets/ic_menu_#{$strnum}_s@2x.png);
+        }
+      }
+    }    
   }
+}
+
+@mixin common_button {
+  height: 36px;  
+  padding: 8px 28px 9px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+@mixin icon_button {
+  height: 28px;  
+  padding: 5px 14px 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
 }
