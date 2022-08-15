@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div class="modal-edit modal-editStandard">
+  <div class="modal-edit modal-editBit">
     <div class="modal-top">
-      <div class="box-title">함체상세정보</div>
+      <div class="box-title">BIT상세정보</div>
       <div class="ic-modal-close close"></div>
     </div>
     <div class="modal-body">       
       <div class="input-box">        
-        <ul class="tab-box">
-          <!-- type1:all, type2:1,3,4 type3:1,3,4,5 type4:1,2,3,4 -->
+        <ul class="tab-box">          
           <li class="tab-menu active" data-tab="tab01">상세정보</li>          
           <li class="tab-menu" data-tab="tab02">이력관리</li>
           <li class="tab-menu" data-tab="tab03">관련자료</li>
           <li class="tab-menu" data-tab="tab04">선번장</li>                    
+          <li class="tab-menu" data-tab="tab05">광스위치</li>                    
         </ul>    
         <div class="tab-content active" id="tab01">
           <div class="content-info">
@@ -29,23 +29,23 @@
             </div>
             <div class="content-edit-wrap">
               <div class="row">
-                <div class="row-title">함체 ID</div>
-                <div class="row-content">함체_185</div>
+                <div class="row-title">BIT ID</div>
+                <div class="row-content">BIT_185</div>
               </div>
               <div class="row">
-                <div class="row-title ic-title-nece">관리번호</div>
+                <div class="row-title">정류장 번호</div>
                 <div class="row-content">
                   <input type="text" value />
                 </div>
               </div>
               <div class="row">
-                <div class="row-title">함체명</div>
+                <div class="row-title">관리번호</div>
                 <div class="row-content">
                   <input type="text" value />
                 </div>
               </div>
               <div class="row">
-                <div class="row-title">함체규격</div>
+                <div class="row-title ic-title-nece">정류장명</div>
                 <div class="row-content">
                   <input type="text" value />
                 </div>
@@ -779,7 +779,214 @@
               </div>
             </div>
           </div>
-        </div>        
+        </div> 
+        <div class="tab-content" id="tab05">
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>광스위치 정보</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="row">
+                <div class="row-title">IP주소</div>
+                <div class="row-content">
+                  <input type="text" value />
+                </div>
+              </div>
+              <div class="row">
+                <div class="row-title">제조사</div>
+                <div class="row-content">
+                  <div class="select-wrap">
+                    <select name="" id="">
+                      <option value="">선택</option>
+                      <option value="">제조사1</option>
+                      <option value="">제조사2</option>
+                      <option value="">제조사3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row-title">모델명</div>
+                <div class="row-content">
+                  <div class="select-wrap">
+                    <select name="" id="">
+                      <option value="">선택</option>
+                      <option value="">모델명1</option>
+                      <option value="">모델명2</option>
+                      <option value="">모델명3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>포트정보</h2>
+              <div class="port-txt">
+                <span class="bit_port_c"></span>Connected
+                <span class="bit_port_dc"></span>Disconnected
+                <span class="bit_port_d"></span>Down
+              </div>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="table-wrapper">
+                <table class="jb-table port-table">
+                  <colgroup>
+                    <col width="*%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">                                      
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Port #</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Type</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>                    
+                    </tr>
+                    <tr>
+                      <td>State</td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                      <td><span class="bit_port_d">Connected</span></td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="jb-table port-table">
+                  <colgroup>
+                    <col width="*%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">                                      
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Port #</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                      <th>10</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Type</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>                    
+                    </tr>
+                    <tr>
+                      <td>State</td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                      <td><span class="bit_port_d">Connected</span></td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="jb-table port-table">
+                  <colgroup>
+                    <col width="*%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">                                      
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Port #</th>
+                      <th>11</th>
+                      <th>12</th>
+                      <th>13</th>
+                      <th>14</th>
+                      <th>15</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Type</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>                    
+                    </tr>
+                    <tr>
+                      <td>State</td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                      <td><span class="bit_port_d">Connected</span></td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="jb-table port-table">
+                  <colgroup>
+                    <col width="*%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">
+                    <col width="16.4%">                                      
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Port #</th>
+                      <th>16</th>
+                      <th>17</th>
+                      <th>18</th>
+                      <th>19</th>
+                      <th>20</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Type</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>
+                      <td>RJ45</td>                    
+                    </tr>
+                    <tr>
+                      <td>State</td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                      <td><span class="bit_port_d">Connected</span></td>
+                      <td><span class="bit_port_c">Connected</span></td>
+                      <td><span class="bit_port_dc">Connected</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>       
       </div>      
       <div class="button-group">
         <button class="btn-white">취소</button>

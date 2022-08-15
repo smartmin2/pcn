@@ -57,8 +57,8 @@ function loadLeft(sName){
       // $("#modal-background").fadeOut(300);
       // $(".modal-con").fadeOut(300);  
       // $('body').css('overflow', 'overlay');         
-      $(this).parents("#left-area").hide();
-      $(this).parents("#right-area").hide();
+      $(this).parents("#left-area").hide();      
+      $(this).parents("#right-area").hide();      
     })
 
     loadEvent();
@@ -85,10 +85,23 @@ function loadEvent() {
   })
   
   // modal-edit  
-  $(".modal-edit .btn-add").on("click", function(){    
+  $(".modal-edit .btn-add").on("click", function(){   
+    $('#right-area .right-area-box').children().hide(); 
       $('#right-area').show();      
       $('.modal-register').show();
       // $("body").css("overflow", "hidden");       
+  })
+  // modal-connect
+  $("#btn-connect").on("click",function(){
+    $('#right-area .right-area-box').children().hide();
+    $('#right-area').show();      
+    $('.modal-connect').show();
+  })
+  // modal-business
+  $(".modal-business .btn-add").on("click", function(){   
+    $('#right-area .right-area-box').children().hide(); 
+      $('#right-area').show();      
+      $('.modal-busi-register').show();      
   })
 
   $(".tab-box .tab-menu").on("click",function () {
@@ -104,9 +117,10 @@ function loadEvent() {
   $("ul.tab-box li").on("click",function(){  
     $(this).addClass('active').siblings().removeClass('active');
   })
+
 }
 
-function loadRight(sName){
+function loadRight(sName){  
   $('#right-area .right-area-box').load('../'+sName+'.html .modal-'+sName,function(){
     $('#right-area').show();
     // $("#modal-background").fadeIn(100);   

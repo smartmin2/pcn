@@ -562,40 +562,275 @@
   overflow: auto;
 }
 
-.modal-editStandard {
+.modal-editStandard, .modal-editBit {
   width: 550px;
 }
 
-.modal-editStandard .line_conect_con {
+.modal-editStandard .line_conect_con, .modal-editBit .line_conect_con {
   width: 100%;
   height: 250px;
   border: 1px solid #d6d6d6;
   position: relative;
 }
 
-.modal-editStandard .line_conect_con * {
+.modal-editStandard .line_conect_con *, .modal-editBit .line_conect_con * {
   position: absolute;
 }
 
-.modal-editStandard .line_conect_con span {
+.modal-editStandard .line_conect_con span, .modal-editBit .line_conect_con span {
   top: 10px;
   left: 10px;
   color: #666;
   font-size: 12px;
 }
 
-.modal-editStandard .line_conect_con .icon-standard {
+.modal-editStandard .line_conect_con .icon-standard, .modal-editBit .line_conect_con .icon-standard {
   width: 20px;
   height: 20px;
   background-size: 100%;
 }
 
-.modal-editStandard .line_conect_con .icon-standard:hover {
+.modal-editStandard .line_conect_con .icon-standard:hover, .modal-editBit .line_conect_con .icon-standard:hover {
   border: none;
+}
+
+.modal-editStandard .port-txt, .modal-editBit .port-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  color: #666;
+}
+
+.modal-editStandard .port-txt span, .modal-editBit .port-txt span {
+  width: 7px;
+  height: 7px;
+  font-size: 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5.5px 6px 5.5px 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-editStandard table.port-table:not(:first-child) thead, .modal-editBit table.port-table:not(:first-child) thead {
+  border-top: none;
 }
 
 .modal-register {
   display: none;
   width: 400px;
+}
+
+.modal-connect {
+  display: none;
+  width: 670px;
+}
+
+.modal-business {
+  display: none;
+  width: 550px;
+}
+
+.modal-input {
+  display: none;
+  width: 300px;
+}
+
+.modal-input .input-main-box {
+  padding: 14px;
+}
+
+.modal-input .input-main-box details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 32px;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #111;
+}
+
+.modal-input .input-main-box details summary img {
+  content: url(../assets/ic_filter_arrow_down@2x.png);
+  width: 11px;
+  height: 7px;
+}
+
+.modal-input .input-main-box details[open] summary img {
+  content: url(../assets/ic_filter_arrow_up@2x.png);
+  width: 11px;
+  height: 7px;
+}
+
+.modal-setting {
+  width: 640px;
+}
+
+.modal-setting .level_box_con {
+  width: 100%;
+  height: 427px;
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.modal-setting .level_box_con .level_box {
+  width: 37px;
+  height: 187px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-setting .level_box_con .level_box button {
+  font-size: 0;
+}
+
+.modal-setting .level_box_con .level_box button.level_top {
+  width: 37px;
+  height: 37px;
+  border: 1px solid #ccc;
+  border-width: 0px 0px 1px 0px;
+  background: url(../assets/ic-lv-plus.png) no-repeat center center;
+}
+
+.modal-setting .level_box_con .level_box button.level_btm {
+  width: 37px;
+  height: 37px;
+  border: 1px solid #ccc;
+  border-width: 1px 0px 0px 0px;
+  background: url(../assets/ic-lv-minus.png) no-repeat center center;
+}
+
+.modal-setting .level_box_con .level_box .level_scroll {
+  width: 37px;
+  height: 118px;
+  text-align: center;
+}
+
+.modal-setting .level_box_con .level_box .level_scroll input {
+  margin: 0;
+  width: 98px;
+  height: 37px;
+  -webkit-transform-origin: 52px 55px;
+          transform-origin: 52px 55px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  accent-color: #082e59;
+}
+
+.modal-setting .level_box_con .level_sbox {
+  width: 240px;
+  height: 427px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul {
+  width: 100%;
+  padding: 10px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 0;
+  height: initial;
+  min-height: initial;
+  margin: 0;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  gap: 8px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li .line_con {
+  width: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 5px 0 0;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li .chk_label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li .icon-pole-01, .modal-setting .level_box_con .level_sbox .filter_ul li .icon-pole-02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 5px 0 0;
+  width: 15px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li .label_chk {
+  margin-right: 10px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li.smallList {
+  margin-left: 30px;
+}
+
+.modal-setting .level_box_con .level_sbox .filter_ul li.labelList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

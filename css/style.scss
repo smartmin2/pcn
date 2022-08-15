@@ -283,7 +283,7 @@
 
         .content-info {
           .table-wrapper {
-            margin: 10px 0 20px;            
+            margin: 10px 0 20px;
           }
         }
 
@@ -300,7 +300,7 @@
   }
 }
 // 함체
-.modal-editStandard{
+.modal-editStandard,.modal-editBit{
   width: 550px;  
   .line_conect_con {
     width:100%;height:250px;border:1px solid #d6d6d6;position:relative;
@@ -312,9 +312,120 @@
       &:hover {border:none;}
     }
   }
+
+  .port-txt {
+    display: flex;
+    font-size: 12px;
+    color: #666;
+    span{width:7px;height:7px;font-size:0;border-radius:50%;display:flex; margin: 5.5px 6px 5.5px 14px;align-items: center; justify-content: center;}
+  }
+  table.port-table {
+    &:not(:first-child) thead {
+      border-top: none;
+    }
+  }
 }
 .modal-register {
   display: none;
   width: 400px;
   // height: 300px;
+}
+.modal-connect {
+  display: none;
+  width: 670px;
+  // height: 300px;
+}
+.modal-business {
+  display: none;
+  width: 550px;
+  // height: 300px;
+}
+// 입력
+.modal-input {
+  display: none;
+  width: 300px;
+
+  .input-main-box {
+    padding: 14px;
+    details summary {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 14px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      height: 32px;
+      background-color: #f9f9f9;
+      font-size: 12px;  
+      letter-spacing: -0.3px;  
+      color: #111;
+
+      img{  
+        content: url(../assets/ic_filter_arrow_down@2x.png);
+        width: 11px;
+        height: 7px;    
+      }
+    }
+    details[open] summary img {
+      content: url(../assets/ic_filter_arrow_up@2x.png);
+      width: 11px;
+      height: 7px;  
+    }
+  }
+}
+.modal-setting{
+  width: 640px;
+  .level_box_con{
+    width:100%;height:427px;margin:15px 0;display:flex;flex-direction: row;
+
+    .level_box{
+      width:37px;height:187px;border:1px solid #ccc;border-radius:4px;margin-right:10px;
+      display:flex;flex-direction: column; justify-content: center; align-items: center;
+
+      button{
+        font-size:0;
+        &.level_top{width:37px;height:37px;border:1px solid #ccc;border-width:0px 0px 1px 0px;background:url(../assets/ic-lv-plus.png) no-repeat center center}
+        &.level_btm{width:37px;height:37px;border:1px solid #ccc;border-width:1px 0px 0px 0px;;background:url(../assets/ic-lv-minus.png) no-repeat center center}
+      }  
+      .level_scroll {
+        width:37px;height:118px; text-align:center;
+        input{
+          margin:0; 
+          width:98px; 
+          height:37px; 
+          transform-origin: 52px 55px;
+          transform: rotate(-90deg);
+          accent-color: #082e59;
+      
+        } 
+      }      
+    }
+
+    .level_sbox{
+      width:240px;height:427px;border:1px solid #ccc;border-radius:4px;
+      .filter_ul{ 
+        width: 100%; padding:10px 16px; display:flex; flex-direction: column;
+        li{ 
+          display:flex; 
+          justify-content: flex-start; 
+          align-items: center; 
+          gap: 8px;
+          padding:7px 0 ; 
+          border-bottom:0; 
+          height:initial; 
+          min-height:initial;
+          margin:0;
+
+          .text{ display:flex; font-size:15px; gap: 8px;}
+          .line_con{ width:21px; display:flex; margin:10px 5px 0 0;}
+          .chk_label{ display:flex; font-size:15px;}
+          .icon-pole-01,.icon-pole-02{ display:flex; margin:5px 5px 0 0;width:15px;}
+          .label_chk{margin-right:10px;}
+
+          &.smallList{ margin-left:30px;}
+          &.labelList{ display:flex;}
+        }
+      }
+    }
+  }  
 }
