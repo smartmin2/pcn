@@ -122,6 +122,18 @@ function loadEvent() {
       $('#right-area').show();      
       $('.modal-user-a').show();      
   })
+// modal-input
+  $(".modal-input input[name='1']").on("change",function(){
+    var ckData = $("input[name='1']:checked").attr("id");	
+    
+    if (ckData == "personal25")
+    {
+      $('#right-area .right-area-box').children().hide(); 
+      $('#right-area').show();      
+      $('.modal-input-standard').show();     
+    }
+  });
+  $(".modal-input input[id='personal25']").click();
 
   $(".tab-box .tab-menu").on("click",function () {
     const tabId = $(this).attr("data-tab"); 

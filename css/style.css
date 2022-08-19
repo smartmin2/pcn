@@ -708,7 +708,7 @@ ul.result-list li .item-right {
   width: 670px;
 }
 
-.modal-business {
+.modal-business, .modal-history {
   display: none;
   width: 550px;
 }
@@ -735,6 +735,7 @@ ul.result-list li .item-right {
 .modal-input {
   display: none;
   width: 300px;
+  padding-bottom: 20px;
 }
 
 .modal-input .input-main-box {
@@ -846,6 +847,10 @@ ul.result-list li .item-right {
 
 .modal-input .input-main-box details ul li.smallList .radio-group label div {
   margin: 0 8px;
+}
+
+.modal-input .input-main-box details:last-child ul li:last-child {
+  border-bottom: 1px solid #ddd;
 }
 
 .modal-input .input-main-box details[open] summary img {

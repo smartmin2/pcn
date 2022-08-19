@@ -391,7 +391,7 @@ ul.result-list {
   width: 670px;
   // height: 300px;
 }
-.modal-business {
+.modal-business,.modal-history {
   display: none;
   width: 550px;
   // height: 300px;
@@ -412,6 +412,7 @@ ul.result-list {
 .modal-input {
   display: none;
   width: 300px;
+  padding-bottom: 20px;
 
   .input-main-box {
     padding: 0 14px;
@@ -472,6 +473,7 @@ ul.result-list {
           }
         }
       }
+      &:last-child ul li:last-child {border-bottom: 1px solid #ddd;}
     } 
     details[open] summary img {
       content: url(../assets/ic_filter_arrow_up@2x.png);
