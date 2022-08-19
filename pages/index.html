@@ -9,20 +9,21 @@
 </head>
 <body>
   <div class="main-wrapper">
+    <div id="toast_action" class="toast_action" ></div>
     <div class="top-area">
       <ul class="gnb toolbar">
         <li><img src="../assets/CI@2x.png" alt=""></li>
         <li>
           <div class="tooltip-bottom" data-tooltip="로그아웃">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-logout"><img src="" alt=""></button>
           </div>          
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="조회">
-            <button type="button" class="modal-open btn-msearch"><img src="" alt=""></button>
+            <button type="button" class="btn-msearch"><img src="" alt=""></button>
           </div>          
         </li>
-        <li>
+        <li class="input">
           <div class="tooltip-bottom" data-tooltip="입력">
             <button type="button" class="btn-minput"><img src="" alt=""></button>
           </div>   
@@ -42,14 +43,14 @@
             <button type="button"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="edit">
           <div class="tooltip-bottom" data-tooltip="편집">
-            <button type="button" class="modal-open btn-medit"><img src="" alt=""></button>
+            <button type="button" class="btn-medit"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="삭제">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-mdelete"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
@@ -79,7 +80,7 @@
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="즐겨찾기">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-mfavorite"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
@@ -89,12 +90,12 @@
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="저장">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-msave"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
           <div class="tooltip-bottom" data-tooltip="거리">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-mdist"><img src="" alt=""></button>
           </div> 
         </li>
         <li>
@@ -180,7 +181,7 @@
           </div>
           <div class="button-group">
             <button class="btn-white">취소</button>
-            <button class="btn-common">저장</button>
+            <button class="btn-common btn-save">저장</button>
           </div>
         </div>
         <!-- 입력->연결하기 (UI_04_0007_1)-->
@@ -196,7 +197,7 @@
               </div>
               <div class="content-edit-wrap">                
                 <div class="table-wrapper tb-connect-wrapper">
-                  <table class="jb-table tb-connet-box">
+                  <table class="jb-table tb-connect-box">
                     <colgroup>
                       <col style="width: 8.5%" />
                       <col style="width: 7%" />
@@ -542,36 +543,509 @@
           </div>
           <div class="button-group">
             <button class="btn-white">취소</button>
-            <button class="btn-common">저장</button>
+            <button class="btn-common btn-save">저장</button>
+          </div>
+        </div>
+        <!-- 환경설정->수정 (UI_12_0005)-->
+        <div class="modal-user-m">
+          <div class="modal-top">
+            <div class="box-title">사용자수정</div>
+            <div class="ic-modal-close close"></div>
+          </div>
+          <div class="modal-body">
+            <div class="content-info">
+              <div class="content-edit-wrap">
+                <div class="row">
+                  <div class="row-title ic-title-nece">관리자 비밀번호</div>
+                  <div class="row-content">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">아이디</div>
+                  <div class="row-content">
+                    <input type="text" value />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">관리자</div>
+                  <div class="row-content">                    
+                    <input type="text" value />
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="button-group">
+            <button class="btn-white">취소</button>
+            <button class="btn-common btn-save">저장</button>
+          </div>
+        </div>
+        <!-- 환경설정->변경 (UI_12_0006)-->
+        <div class="modal-pass-m">
+          <div class="modal-top">
+            <div class="box-title">비밀번호 변경</div>
+            <div class="ic-modal-close close"></div>
+          </div>
+          <div class="modal-body">
+            <div class="content-info">
+              <div class="content-edit-wrap">
+                <div class="row">
+                  <div class="row-title ic-title-nece">관리자 비밀번호</div>
+                  <div class="row-content">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title ic-title-nece">비밀번호</div>
+                  <div class="row-content">
+                    <input type="text" value />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title ic-title-nece">확인 비밀번호</div>
+                  <div class="row-content">                    
+                    <input type="text" value />
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="button-group">
+            <button class="btn-white">취소</button>
+            <button class="btn-common btn-save">저장</button>
+          </div>
+        </div>
+        <!-- 환경설정->변경 (UI_12_0007)-->
+        <div class="modal-user-a">
+          <div class="modal-top">
+            <div class="box-title">회원추가</div>
+            <div class="ic-modal-close close"></div>
+          </div>
+          <div class="modal-body">
+            <div class="content-info">
+              <div class="content-edit-wrap">
+                <div class="row">
+                  <div class="row-title">아이디</div>
+                  <div class="row-content">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">이름</div>
+                  <div class="row-content">
+                    <input type="text" value />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title ic-title-nece">비밀번호</div>
+                  <div class="row-content">                    
+                    <input type="text" value />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title ic-title-nece">비밀번호 확인</div>
+                  <div class="row-content">                    
+                    <input type="text" value />
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="button-group">
+            <button class="btn-white">취소</button>
+            <button class="btn-common btn-save">저장</button>
           </div>
         </div>
       </div>    
     </div>
     <div class="toolbar bottom-bar">        
       <ul id="ticker">
-        <li><a href="#"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00  110 CCTV </a></li>
-        <li><a href="#">[중증장애] 2021-07-21 00:00:00 110 133</a></li>
-        <li><a href="#">[중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
-        <li><a href="#"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
+        <li><a href="#" class="go_modal_alarm"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00  110 CCTV </a></li>
+        <li><a href="#" class="go_modal_alarm">[중증장애] 2021-07-21 00:00:00 110 133</a></li>
+        <li><a href="#" class="go_modal_alarm">[중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
+        <li><a href="#" class="go_modal_alarm"><span>아이콘</span> [중증장애] 2021-07-21 00:00:00 110 CCTV111</a></li>
       </ul>
     </div>
+    <div class="toolbar modal-dist">      
+        <div class="title">총거리</div>
+        <div class="dist"><span>26</span>km</div>
+        <a href="#" class="btn-input-delete">삭제</a>      
+    </div>
+    <div id="modal-background"></div>
+    <!-- 로그아웃 모달 -->
+    <div class="modal-logout toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title"></div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        로그아웃 하시겠습니까?
+      </div>
+      <div class="button-group">
+        <button class="btn-white close">취소</button>
+        <button class="btn-common">확인</button>
+      </div>
+    </div>
+    <!-- 연결끊기 모달 -->
+    <div class="modal-disconnect toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title">연결끊기</div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        <div class="content-info">          
+          <div class="content-edit-wrap">                
+            <div class="table-wrapper tb-disconnect-wrapper">
+              <table class="jb-table tb-disconnect-box">
+                <colgroup>
+                  <col width="8%">
+                  <col width="12%">
+                  <col width="12%">
+                  <col width="12%">
+                  <col width="*">
+                  <col width="12%">
+                  <col width="12%">
+                  <col width="12%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <!--색상코드는 라인별로-->
+                    <!--
+                    .core4_bgc / .core12_bgc {background-color:#ff6c00}
+                    .core24_bgc / .core36_bgc / .core48_bgc{background-color:#a619ff}
+                    .core72_bgc / .core96_bgc{background-color:#14a419}
+                    .core144_bgc / .core288_bgc{background-color:#ff0000}
+                    .coreel_bgc{background-color:#000000}
+                    .corehole_bgc{background-color:#007aba}
+                    -->
+                    <th rowspan="2" class="line-right"><input type="checkbox" id="cid1" /><label for="cid1"><span class="ico"></span></label></th>
+                    <th colspan="3" class="line-bottom line-right"><span class="cores_bgc"></span>선택선로 ID:97_통신선로</th>
+                    <th rowspan="2" class="line-right">RING정보</th>
+                    <th colspan="3" class="line-bottom"><span class="cores01_bgc"></span>선택선로 ID:97_통신선로</th>
+                  </tr>
+                  <tr>
+                    <th>선로ID</th>
+                    <th>규격</th>
+                    <th class="line-right">인입선번</th>
+                    <th>선로ID</th>
+                    <th>규격</th>
+                    <th>인입선번</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="line-right"><input type="checkbox" id="cid1-1" name="check" /><label for="cid1-1"><span class="ico"></span></label></td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td class="line-right">1</td>
+                    <td class="line-right">RING정보</td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td class="line-right"><input type="checkbox" id="cid1-2" name="check"/><label for="cid1-2"><span class="ico"></span></label></td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td class="line-right">1</td>
+                    <td class="line-right">RING정보</td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td class="line-right"><input type="checkbox" id="cid1-3" name="check"/><label for="cid1-3"><span class="ico"></span></label></td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td class="line-right">1</td>
+                    <td class="line-right">RING정보</td>
+                    <td>0</td>
+                    <td>24C</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="button-group">
+              <button class="btn-white">취소</button>              
+              <button class="btn-common">연결끊기</button>
+            </div>           
+          </div>
+        </div> 
+      </div>          
+    </div>
+    <!-- 저장 하시겠습니까? -->
+    <div class="modal-save toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title"></div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        저장 하시겠습니까?
+      </div>
+      <div class="button-group">
+        <button class="btn-white close">취소</button>
+        <button class="btn-common" onclick="toast('저장 되었습니다.')">확인</button>
+      </div>
+    </div>
+    <!-- 삭제 하시겠습니까? -->
+    <div class="modal-delete toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title"></div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        삭제 하시겠습니까?
+      </div>
+      <div class="button-group">
+        <button class="btn-white close">취소</button>
+        <button class="btn-common" onclick="toast('삭제 되었습니다.')">확인</button>
+      </div>
+    </div>
     <!-- <div class="map_stage_bg"> -->
-      <!--버스-->
-      <div class="icon_area" style="top:200px;left:800px;">
-        <div class="icon-bus line-4core">버스</div>        
-      </div>
-      <!--//버스-->
-      <!--traffic-->
-      <div class="icon_area" style="top:200px;left:1200px;">
-        <div class="icon-traffic line-36core">버스</div>
-      </div>
-      <!--//traffic-->
-      <div class="icon_area" style="top:400px;left:1200px;">
-        <div class="icon-cctv line-36core">버스</div>
-      </div>
-      <div class="map_bg">
+
+    <div class="map_stage_bg">
+          <!--버스-->
+          <div class="icon-area" style="top:200px;left:800px;">
+            <div class="icon-bus line-4core">버스</div>        
+          </div>
+          <!--//버스-->
+          <!--traffic-->
+          <div class="icon-area" style="top:200px;left:1200px;">
+            <div class="icon-traffic line-36core">버스</div>
+          </div>
+          <!--//traffic-->
+          <div class="icon-area" style="top:400px;left:1200px;">
+            <div class="icon-cctv line-36core">버스</div>
+          </div>
+          <!--//버스-->
+          <!--BIT정보-->
+          <!--각 라인별로 색상 코드 입력가능-->
+          <!--
+          .line-4core
+          .line-8core
+          .line-12core
+          .line-24core
+          .line-36core
+          .line-48core
+          .line-72core
+          .line-96core
+          .line-144core
+          .line-288core
+          .line-elcore
+          .line-holecore
+          -->
+          <div class="click_icbus icon_area" style="position:absolute;top:200px;left:800px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-bus line-72core">버스</span>
+            <div class="map_detail_rect line-72core map_detail_icbus">
+              <div class="map_detail_arrow">화살</div>
+              <div class="map_detail_con">
+                <p class="map_detail_con_title">BIT 정보</p>
+                <div class="map_con_eixt">
+                  <div class="icon-bus">Icon-버스도착정보안내기</div>
+                  <p>신중동역2번출구</p>              
+                </div>
+                <ul class="map_con_list">
+                  <li>&middot; 정류장번호 : 0000</li>
+                  <li>&middot; 정류장명 : 신중동역</li>
+                </ul>
+              </div>
+            </div>
+            <input type="hidden" id="c_e_1" value="0">
+          </div>
+          <!--//버스-->
+          
+          <!-- 테스트버튼 -->
+          <!--함체입력-->
+          <div class="click-standard icon_area" style="position:absolute;top:300px;left:600px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-standard">Icon-함체</span>
+            <ul class="areabox box-input">
+              <li><a href="#" class="go-input">입력</a></li>
+              <li>취소</li>
+            </ul>        
+          </div>
+          <!--교통신호 상세정보-->  
+          <div class="click-standard icon_area" style="position:absolute;top:600px;left:600px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-traffic">Icon-함체</span>
+            <ul class="areabox box-input">
+              <li><a href="#" class="go_modal_standard">상세정보</a></li>
+              <li><a href="javascript:" class="go_modal_bookmark" onclick="toast('즐겨찾기에 추가 되었습니다.')">즐겨찾기 추가</a></li>
+            </ul>        
+          </div>
+          
+          <!--정보변경 상세정보-->
+          <div class="click-standard icon_area" style="position:absolute;top:400px;left:400px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-standard">Icon-함체</span>
+            <ul class="areabox box-input">
+              <li>선형변경</li>
+              <li class="detail_fac_plus">시설물 추가</li>
+              <li onclick="toast('삭제 되었습니다.')">삭제</li>
+              <li>정보변경</li>
+            </ul>        
+          </div>  
+          <!--겹쳤을 때 선택-->
+          <div class="click-overlap icon_area" style="position:absolute;top:350px;left:900px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-traffic">Icon-함체</span>
+            <div class="areabox content-info">
+              <div class="sub-title">
+                <p>선택</p>          
+              </div>
+              <div class="content-edit-wrap">        
+                <div class="table-wrapper table-scroll">
+                  <table class="jb-table">
+                    <colgroup>
+                      <col width="25%">
+                      <col width="75%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>시설물</th>
+                        <th>정보</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="f-center">
+                            <div class="icon-bus">Icon-버스도착정보안내기</div>
+                          </div>
+                        </td>
+                        <td><a href="#" class="over_info">신중동역2번출구</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="f-center">
+                            <div class="icon-cctv">Icon-폐쇄회로텔레비전</div>
+                          </div>
+                        </td>
+                        <td><a href="#" class="over_info">신중동역2번출구</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="f-center">
+                            <div class="icon-ing">Icon-인공</div>
+                          </div>
+                        </td>
+                        <td><a href="#" class="over_info">신중동역2번출구</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="f-center">
+                            <div class="line_con line-4core"></div>
+                          </div>
+                        </td>
+                        <td><a href="#" class="over_info">신중동역2번출구</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>     
+          <!--선로 정보-->
+          <div class="click-lineinfor icon_area" style="position:absolute;top:300px;left:1300px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-traffic">Icon-함체</span>
+            <div class="areabox">
+              <p class="map_detail_con_title">선로 정보</p>
+              <div class="modal_scon">
+                <p>131_통신선로</p>
+                <ul class="map_con_list">
+                  <li>접속점 : xxxx-xx</li>
+                  <li>규격 : 4 care</li>
+                  <li>위치 : 가공</li>
+                  <li>길이(m) : 000</li>
+                </ul>
+              </div>
+            </div>
+          </div>          
+            
+          <!-- 시설물추가 -->
+          <div class="click-overlap icon_area fac_plus" style="z-index:20;box-sizing:content-box !important; display: none;">        
+            <div class="areabox content-info active">
+              <div class="content-edit-wrap">        
+                <div class="table-scroll">
+                  <table class="jb-table table_scroll_head">
+                    <colgroup>
+                      <col width="35%">
+                      <col width="65%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th colspan="2">시설물 추가</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div class="table_scroll01">
+                    <table class="jb-table table_scroll_body">
+                      <colgroup>
+                        <col width="35%">
+                        <col width="65%">
+                      </colgroup>  
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="radio-group">
+                              <input type="radio" id="personal" name="1" checked >
+                              <label for="personal" class="chk_label" >&nbsp;</label>
+                            </div>
+                          </td>
+                          <td>한전전신주</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="radio-group">
+                              <input type="radio" id="personal2" name="1" checked >
+                              <label for="personal2" class="chk_label" >&nbsp;</label>
+                            </div>
+                          </td>
+                          <td>IP주</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="radio-group">
+                              <input type="radio" id="personal3" name="1" checked >
+                              <label for="personal3" class="chk_label" >&nbsp;</label>
+                            </div>
+                          </td>
+                          <td>TR</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="radio-group">
+                              <input type="radio" id="personal" name="1" checked >
+                              <label for="personal" class="chk_label" >&nbsp;</label>
+                            </div>
+                          </td>
+                          <td>한전전신주</td>
+                        </tr>
+                      </tbody>    
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn-white">취소</button>
+                <button class="btn-common">확인</button>
+              </div>
+            </div>
+          </div>  
         
-      </div>
+          <!--  메모 -->
+          <div class="click_memo icon_area" style="position:absolute;top:180px;left:200px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-memo">버스</span>
+            <div class="map_detail_memo_rect">
+              <div class="map_detail_con">
+                <p>메모 내용 출력 <br> 메모 내용 출력</p>
+              </div>
+              <div class="map_detail_arrow_m"></div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="error-box">편집모드를 ON 하세요</div>
+      <!-- toolbox  -->
+
     <!-- </div> -->
   </div>
   
@@ -588,16 +1062,23 @@
       loadEvent();
     })
     //편집
-    $(".btn-medit").on("click",function(){
+    $(".go-input,.go_modal_standard").on("click",function(){
       // 함체-editStandard, BIT-editBit, CCTV-editCctv, 신호제어기-editTraffic, TR-editTR, 맨홀-editManhole,
       // 전주-editPole, 국사-editTelephone, 통신선로-edit4core, 전기선로-editElcore, 관로-editHole    
       loadLeft("editBit");
       loadEvent();
+      $(".box-input").removeClass("active");
     })
     //입력
     $(".btn-minput").on("click",function(){
-      loadLeft("input");
-      loadEvent();
+      if ($(".btn-medit").parents("li").hasClass("active")){
+        loadLeft("input");
+        loadEvent();
+      } else $(".error-box").show();
+    })
+    $(".btn-medit").on("click",function(){
+      if ($(this).hasClass("active") == false)
+        $(".error-box").hide();
     })
     // 지도라벨
     $(".btn-mmaplabel").on("click",function(){
@@ -615,6 +1096,52 @@
     $(".btn-msetting").on("click",function(){
       loadLeft("setting");
       loadEvent();
+    })
+
+    // 알람리스트
+    $(".go_modal_alarm").on("click",function(){
+      loadLeft("alarm");
+      loadEvent();
+    })
+
+    // 거리
+    $(".btn-mdist").on("click",function(){
+      $(".modal-dist").css("display", "flex").hide().fadeIn();
+    })    
+    // 즐겨찾기
+    $(".btn-mfavorite").on("click",function(){
+      loadLeft("favorite");
+      loadEvent();
+    })
+
+    $(".modal-dist a.btn-input-delete").on("click",function(){
+      $(".modal-dist").hide();
+      $(".gnb li").removeClass("active");
+    })
+
+    $(".btn-logout").on("click",function(){
+      $("#modal-background").fadeIn(300);
+      $(".modal-logout").css("display", "block").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    })
+    $(".btn-msave").on("click",function(){
+      $("#modal-background").fadeIn(300);
+      $(".modal-save").css("display", "block").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    })
+    $(".btn-mdelete").on("click",function(){
+      $("#modal-background").fadeIn(300);
+      $(".modal-delete").css("display", "block").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    })
+    $(".btn-testinput").on("click",function(){
+      $(".box-input").css("display", "block");
+    })
+    $(".click-standard span").on("click",function(){
+      $(this).siblings("ul.box-input").toggleClass("active");
+    })
+    $(".click-overlap span").on("click",function(){
+      $(this).siblings(".content-info").toggleClass("active");
     })
   </script>
 </body>
