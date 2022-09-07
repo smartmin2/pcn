@@ -13,100 +13,89 @@
     <div class="top-area">
       <ul class="gnb toolbar">
         <li><img src="../assets/CI@2x.png" alt=""></li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="로그아웃">
-            <button type="button" class="btn-logout"><img src="" alt=""></button>
-          </div>          
-        </li>
-        <li>
+        <li class="ic-menu-02">
           <div class="tooltip-bottom" data-tooltip="조회">
             <button type="button" class="btn-msearch"><img src="" alt=""></button>
           </div>          
         </li>
-        <li class="input">
+        <li class="ic-menu-04">
+          <div class="tooltip-bottom" data-tooltip="선로/시설물">
+            <button type="button" class="btn-mmaplabel"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li class="gnb-seperate"></li>
+        <li class="input ic-menu-03">
           <div class="tooltip-bottom" data-tooltip="입력">
             <button type="button" class="btn-minput"><img src="" alt=""></button>
           </div>   
         </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="지도">
-            <button type="button" class="btn-mmaplabel"><img src="" alt=""></button>
-          </div> 
-        </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="NMS">
-            <button type="button"><img src="" alt=""></button>
-          </div> 
-        </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="포인트">
-            <button type="button"><img src="" alt=""></button>
-          </div> 
-        </li>
-        <li class="edit">
-          <div class="tooltip-bottom" data-tooltip="편집">
-            <button type="button" class="btn-medit"><img src="" alt=""></button>
-          </div> 
-        </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="삭제">
+        <li class="ic-menu-22">
+          <div class="tooltip-bottom" data-tooltip="수정/삭제">
             <button type="button" class="btn-mdelete"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="gnb-seperate"></li>
+        <li class="ic-menu-09">
           <div class="tooltip-bottom" data-tooltip="선번장">
             <button type="button" class="btn-msunbun"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="ic-menu-05">
+          <div class="tooltip-bottom" data-tooltip="NMS(광스위치)">
+            <button type="button" class="btn-mnms"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li class="ic-menu-10">
           <div class="tooltip-bottom" data-tooltip="이력관리">
             <button type="button" class="btn-mhistory"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="ic-menu-11">
           <div class="tooltip-bottom" data-tooltip="사업관리">
             <button type="button" class="btn-mbusiness"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="환경설정">
-            <button type="button" class="btn-msetting"><img src="" alt=""></button>
-          </div> 
-        </li>
-        <li>
+        <li class="ic-menu-13">
           <div class="tooltip-bottom" data-tooltip="리포트">
-            <button type="button"><img src="" alt=""></button>
+            <button type="button" class="btn-mreport"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="gnb-seperate"></li>
+        <li class="ic-menu-14">
           <div class="tooltip-bottom" data-tooltip="즐겨찾기">
             <button type="button" class="btn-mfavorite"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="ic-menu-17">
+          <div class="tooltip-bottom" data-tooltip="거리측정">
+            <button type="button" class="btn-mdist"><img src="" alt=""></button>
+          </div> 
+        </li>
+        <li class="ic-menu-15">
           <div class="tooltip-bottom" data-tooltip="인쇄">
             <button type="button"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="ic-menu-16">
           <div class="tooltip-bottom" data-tooltip="저장">
             <button type="button" class="btn-msave"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
-          <div class="tooltip-bottom" data-tooltip="거리">
-            <button type="button" class="btn-mdist"><img src="" alt=""></button>
+        <li class="ic-menu-12">
+          <div class="tooltip-bottom" data-tooltip="환경설정">
+            <button type="button" class="btn-msetting"><img src="" alt=""></button>
           </div> 
         </li>
-        <li>
+        <li class="gnb-seperate"></li>
+        <li class="ic-menu-18">
           <div class="tooltip-bottom" data-tooltip="도움말">
             <button type="button"><img src="" alt=""></button>
           </div> 
         </li>        
-        <li>
-          <div class="tooltip-bottom" data-tooltip="위치">
-            <button type="button"><img src="" alt=""></button>
-          </div> 
+        <li class="ic-menu-01">
+          <div class="tooltip-bottom" data-tooltip="로그아웃">
+            <button type="button" class="btn-logout"><img src="" alt=""></button>
+          </div>          
         </li>
       </ul>
       <ul class="gnb-nav toolbar">
@@ -121,6 +110,11 @@
           </div>
         </li>
       </ul>
+      <div class="edit-mode">        
+          <div class="tooltip-bottom" data-tooltip="편집">
+            <button type="button"><img src="" alt=""></button>
+          </div>        
+      </div>
     </div>    
     <div id="left-area">      
       <div class="left-area-box toolbox">
@@ -168,12 +162,17 @@
                 </div>
                 <div class="row">
                   <div class="row-title">첨부파일</div>
-                  <div class="row-content">
+                  <div class="row-content f-column">
                     <div class="filebox"> 
                       <input class="upload-name" value="" disabled="disabled" placeholder="선택된 파일이 없습니다"> 
                       <label for="ex_filename">파일선택</label> 
                       <input type="file" id="ex_filename" class="upload-hidden"> 
                     </div>   
+                    <ul class="fileList">
+                      <li>file.doc<a href="#" class="btn-input-delete">삭제</a></li>
+                      <li>file.doc<a href="#" class="btn-input-delete">삭제</a></li>
+                      <li>file.doc<a href="#" class="btn-input-delete">삭제</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -204,7 +203,10 @@
                       <col style="width: 7%" />
                       <col style="width: 4%" />                        
                       <col style="width: 8%" />
-                      <col style="width: 15%" />                      
+                      <col style="width: 4%" />
+                      <col style="width: 4%" />
+                      <col style="width: 4%" />
+                      <col style="width: 3%" />
                       <col style="width: 8%" />                        
                       <col style="width: 8.5%" />
                       <col style="width: 7%" />
@@ -222,18 +224,23 @@
                     .coreel_bgc{background-color:#000000}
                     .corehole_bgc{background-color:#007aba}
                     -->
-                        <th colspan="4" class="line-bottom line-top"><span class="cores_bgc"></span>579_통신선로</th>                          
+                        <th colspan="4" class="line-bottom line-top"><span class="cores_bgc"></span>선택 선로 ID : 97_통신선로</th>                          
                         <th rowspan="2" class="th-no-cell">&nbsp;</th>
-                        <th rowspan="2" class="line-bottom line-top">RING 정보</th>
+                        <th colspan="4" class="line-bottom line-top">RING 정보</th>
                         <th rowspan="2" class="th-no-cell">&nbsp;</th>                          
-                        <th colspan="4" class="line-bottom line-top"><span class="cores01_bgc"></span>580_통신선로</th>
+                        <th colspan="4" class="line-bottom line-top"><span class="cores01_bgc"></span>선택 선로 ID : 97_통신선로</th>
                       </tr>
                       <tr>
                         <th class="line-bottom">선로ID</th>
                         <th class="line-bottom">규격</th>
                         <th class="line-bottom">인입선번</th>   
-                        <th class="line-bottom">&nbsp;</th>                       
-      
+                        <th class="line-bottom">&nbsp;</th>     
+
+                        <th class="line-bottom">RT인입</th>
+                        <th class="line-bottom">NODE</th>
+                        <th class="line-bottom">RING #</th>   
+                        <th class="line-bottom">RT인입</th>   
+
                         <th class="line-bottom">선로ID</th>
                         <th class="line-bottom">규격</th>
                         <th class="line-bottom">인입선번</th>    
@@ -247,15 +254,39 @@
                             <li>0</li>
                             <li>24c</li>
                             <li>1</li>
-                            <li><a href="#" class="">삭제</a></li>
+                            <li><a href="#" class="btn-input-delete">삭제</a></li>
                           </ul>
                         </td>
                         <td><div class="connect-line-dash">라인</div></td>
-                        <td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
                           <div class="select-wrap">
                             <select name="" id="">
-                              <option value="">선택</option>
+                              <option value="">NODE선택</option>
                               <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">NODE선택</option>
+                              <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
                             </select>
                           </div>
                         </td>
@@ -279,59 +310,132 @@
                           </ul>
                         </td>
                         <td><div class="connect-line-dash">라인</div></td>
-                        <td>
-                          <div class="mattch">CCTV</div>
-                        </td>
-                        <td><div class="connect-line-dash">라인</div></td>
-                        <td colspan="4">
-                          <ul class="connect-cell">
-                            <li>0</li>
-                            <li>24c</li>
-                            <li>1</li>
-                            <li><a href="#" class="btn-input-delete">삭제</a></li>
-                          </ul>
-                        </td>
-                      </tr>   
-                      <tr>
-                        <td colspan="4">
-                          <ul class="connect-cell">
-                            <li>0</li>
-                            <li>24c</li>
-                            <li>1</li>
-                            <li><a href="#" class="btn-input-delete">삭제</a></li>
-                          </ul>
-                        </td>
-                        <td><div class="connect-line-dash">라인</div></td>
-                        <td>
-                          <div class="no_mattch">불일치</div>
-                        </td>
-                        <td><div class="connect-line-dash">라인</div></td>
-                        <td colspan="4">
-                          <ul class="connect-cell">
-                            <li>0</li>
-                            <li>24c</li>
-                            <li>1</li>
-                            <li><a href="#" class="btn-input-delete">삭제</a></li>
-                          </ul>
-                        </td>
-                      </tr>   
-                      <tr>
-                        <td colspan="4">
-                          <ul class="connect-cell">
-                            <li>0</li>
-                            <li>24c</li>
-                            <li>1</li>
-                            <li><a href="#" class="btn-input-delete">삭제</a></li>
-                          </ul>
-                        </td>
-                        <td><div class="connect-line-dash">라인</div></td>
-                        <td>
-                          <div class="input_type01_inbtn_c">
-                            <input type="text" class="input_type01_inbtn" placeholder="직접입력">
-                            <a href="#" class="btn-input-delete">삭제</a>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
                           </div>
                         </td>
-                        
+                        <td class="padding-right-6px">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">NODE3</option>
+                              <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">NODE3</option>
+                              <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td><div class="connect-line-dash">라인</div></td>
+                        <td colspan="4">
+                          <ul class="connect-cell">
+                            <li>0</li>
+                            <li>24c</li>
+                            <li>1</li>
+                            <li><a href="#" class="btn-input-delete">삭제</a></li>
+                          </ul>
+                        </td>
+                      </tr>   
+                      <tr>
+                        <td colspan="4">
+                          <ul class="connect-cell">
+                            <li>0</li>
+                            <li>24c</li>
+                            <li>1</li>
+                            <li><a href="#" class="btn-input-delete">삭제</a></li>
+                          </ul>
+                        </td>
+                        <td><div class="connect-line-dash">라인</div></td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">NODE3</option>
+                              <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">3-1</option>
+                              <option value="">직접입력</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td><div class="connect-line-dash">라인</div></td>
+                        <td colspan="4">
+                          <ul class="connect-cell">
+                            <li>0</li>
+                            <li>24c</li>
+                            <li>1</li>
+                            <li><a href="#" class="btn-input-delete">삭제</a></li>
+                          </ul>
+                        </td>
+                      </tr>   
+                      <tr>
+                        <td colspan="4">
+                          <ul class="connect-cell">
+                            <li>0</li>
+                            <li>24c</li>
+                            <li>1</li>
+                            <li><a href="#" class="btn-input-delete">삭제</a></li>
+                          </ul>
+                        </td>
+                        <td><div class="connect-line-dash">라인</div></td>
+                        <td class="padding-right-6px">
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="node-error">! NODE 2</div>
+                        </td>
+                        <td class="padding-right-6px">
+                          <div class="node-error">! NODE 2-1</div>
+                        </td>
+                        <td>
+                          <div class="select-wrap tb-select">
+                            <select name="" id="">
+                              <option value="">N</option>
+                              <option value="">Y</option>
+                            </select>
+                          </div>
+                        </td>                        
                         <td><div class="connect-line-dash">라인</div></td>
                         <td colspan="4">
                           <ul class="connect-cell">
@@ -348,7 +452,7 @@
                 <div class="button-group">
                   <button class="btn-white">취소</button>
                   <button class="btn-white">초기화</button>
-                  <button class="btn-common">연결하기</button>
+                  <button class="btn-common">저장</button>
                 </div>   
                 <div class="table-wrapper-2h">
                   <table class="jb-table">
@@ -529,13 +633,39 @@
                 </div>
                 <div class="row">
                   <div class="row-title">연관시설물등록</div>
-                  <div class="row-content f-column">
-                    <button class="exel-btn">샘플 파일</button>
-                    <div class="filebox"> 
-                      <input class="upload-name" value="" disabled="disabled" placeholder="선택된 파일이 없습니다"> 
-                      <label for="ex_filename">파일선택</label> 
-                      <input type="file" id="ex_filename" class="upload-hidden"> 
-                    </div>   
+                  <div class="row-content">
+                    <button class="btn-type02 btn-busi-batch">일괄등록</button>
+                    <button class="btn-type02 btn-busi-each">개별등록</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-title">등록시설물</div>
+                  <!-- row-content에 none-data 클래스 추가시 등록된 시설물이 없습니다. -->
+                  <div class="row-content">
+                    <div class="table-wrapper">
+                      <table class="jb-table">
+                        <colgroup>
+                          <col width="40%">
+                          <col width="60%">                          
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>종류</th>                                    
+                            <th>관리번호</th>                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>CCTV</td>
+                            <td>C_BC_부천고용복지1</td>                            
+                          </tr>
+                          <tr>
+                            <td>CCTV</td>
+                            <td>C_BC_부천고용복지1</td>                            
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>                    
                   </div>
                 </div>
               </div>
@@ -679,6 +809,202 @@
                   <div class="row-title ic-title-nece">관리번호</div>
                   <div class="row-content">
                     <input type="text" value />
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="button-group">
+            <button class="btn-white">취소</button>
+            <button class="btn-common btn-save">저장</button>
+          </div>
+        </div>
+        <!-- 선번장->보기 (UI_09_0002)-->
+        <div class="modal-sunView">
+          <div class="modal-top">
+            <div class="box-title">선번장 보기</div>
+            <div class="ic-modal-close close"></div>
+          </div>
+          <div class="modal-body">
+            <div class="content-info">
+              <div class="sub-title">
+                <h2>3-1</h2>
+              </div>
+              <div class="content-edit-wrap">
+                <div class="node-point-wrap">
+                  <div class="node-point">
+                    <div class="node-point-title">Node3</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">CCTV DO1</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">BIT_1234</div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="content-info">
+              <div class="sub-title">
+                <h2>3-2</h2>
+              </div>
+              <div class="content-edit-wrap">
+                <div class="node-point-wrap">
+                  <div class="node-point">
+                    <div class="node-point-title">Node3</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">CCTV DO1</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">BIT_1234</div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="content-info">
+              <div class="sub-title">
+                <h2>3-3</h2>
+              </div>
+              <div class="content-edit-wrap">
+                <div class="node-point-wrap">
+                  <div class="node-point">
+                    <div class="node-point-title">Node3</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">CCTV DO1</div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title">BIT_1234</div>
+                    <div class="node-point-circle"></div>                    
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>
+                    <div class="node-point-info">
+                      <div class="node-point-line"></div>
+                      <div class="node-point-text">703_코어_3</div>
+                    </div>
+                  </div>
+                  <div class="node-point">
+                    <div class="node-point-title"></div>
+                    <div class="node-point-circle"></div>                    
                   </div>
                 </div>
               </div>
@@ -835,6 +1161,221 @@
         <button class="btn-common" onclick="toast('삭제 되었습니다.')">확인</button>
       </div>
     </div>
+    <!-- 사업관리 ->등록->일괄등록 (UI_11_0003)-->
+    <div class="modal-busi-reg-batch toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title">일괄등록</div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        <div class="content-info">
+          <div class="button-group">
+            <button class="btn-type02">시설물 추가</button>
+            <button class="btn-type02">선로 추가</button>
+            <button class="btn-type02">코어연결 추가</button>
+          </div>
+          <div class="filebox"> 
+            <input class="upload-name" value="" disabled="disabled" placeholder="선택된 파일이 없습니다"> 
+            <label for="ex_filename">파일선택</label> 
+            <input type="file" id="ex_filename" class="upload-hidden"> 
+          </div>   
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="btn-white close">취소</button>
+        <button class="btn-common" onclick="toast('추가 되었습니다.')">저장</button>
+      </div>
+    </div>
+    <!-- 사업관리 ->등록->개별등록 (UI_11_0003)-->
+    <div class="modal-busi-reg-each toolbox modal-con">
+      <div class="modal-top">
+        <div class="box-title">연관 시설물 개별등록</div>
+        <div class="ic-modal-close close"></div>
+      </div>
+      <div class="modal-body">
+        <div class="content-info">
+          <div class="content-edit-wrap">
+            <div class="row">
+              <div class="row-title">카테고리</div>
+              <div class="row-content">
+                <div class="select-wrap">
+                  <select name="" id="">
+                    <option value="">CCTV</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-title">검색</div>
+              <div class="row-content">
+                <input type="date" name="" id="" value="2022-08-10">
+                <button class="btn-type01">조회</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div class="content-info">
+          <div class="content-edit-wrap">
+            <div class="table-wrapper">
+              <table class="jb-table">
+                <colgroup>
+                  <col width="20%">
+                  <col width="30%">                          
+                  <col width="20%">
+                  <col width="15%">
+                  <col width="15%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>종류</th>                                    
+                    <th>관리번호</th>    
+                    <th>ID</th>                        
+                    <th>위치</th>
+                    <th>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지1</td>
+                    <td>CCTV_186</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지2</td>
+                    <td>CCTV_187</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지3</td>
+                    <td>CCTV_188</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>   
+          </div>
+        </div>
+        <div class="content-info">
+          <div class="sub-title">
+            <p>선택리스트</p>          
+          </div>
+          <div class="content-edit-wrap">
+            <div class="table-wrapper">
+              <table class="jb-table">
+                <colgroup>
+                  <col width="20%">
+                  <col width="30%">                          
+                  <col width="20%">
+                  <col width="15%">
+                  <col width="15%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>종류</th>                                    
+                    <th>관리번호</th>    
+                    <th>ID</th>                        
+                    <th>위치</th>
+                    <th>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지1</td>
+                    <td>CCTV_186</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지2</td>
+                    <td>CCTV_187</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>CCTV</td>
+                    <td>C_BC_부천고용복지3</td>
+                    <td>CCTV_188</td>
+                    <td>
+                      <div class="f-center">
+                        <button type="button" class="location-btn">위치보기</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="f-center">
+                        <input type="checkbox" name="" id="">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>   
+          </div>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="btn-white close">취소</button>
+        <button class="btn-common" onclick="toast('추가 되었습니다.')">저장</button>
+      </div>
+    </div>
     <!-- <div class="map_stage_bg"> -->
 
     <div class="map_stage_bg">
@@ -893,8 +1434,17 @@
           <div class="click-standard icon_area" style="position:absolute;top:300px;left:600px;z-index:20;box-sizing:content-box !important;">
             <span class="icon-standard">Icon-함체</span>
             <ul class="areabox box-input">
-              <li><a href="#" class="go-input">입력</a></li>
-              <li>취소</li>
+              <li class="go-input"><a href="#">저장</a></li>
+              <li class="go-cancel">취소</li>
+            </ul>        
+          </div>
+          <!--이동,삭제,정보변경-->
+          <div class="click-standard icon_area" style="position:absolute;top:500px;left:500px;z-index:20;box-sizing:content-box !important;">
+            <span class="icon-standard">Icon-함체</span>
+            <ul class="areabox box-input">
+              <li onclick="toast('이동 되었습니다.')">이동</li>
+              <li class="btn-mdelete">삭제</li>
+              <li class="go-input"><a href="#">정보변경</a></li>
             </ul>        
           </div>
           <!--교통신호 상세정보-->  
@@ -990,7 +1540,8 @@
                 </ul>
               </div>
             </div>
-          </div>          
+          </div>  
+                  
             
           <!-- 시설물추가 -->
           <div class="click-overlap icon_area fac_plus" style="z-index:20;box-sizing:content-box !important; display: none;">        
@@ -1057,7 +1608,7 @@
                 </div>
               </div>
               <div class="button-group">
-                <button class="btn-white">취소</button>
+                <button class="btn-white btn-cancel">취소</button>
                 <button class="btn-common">확인</button>
               </div>
             </div>
@@ -1117,13 +1668,21 @@
       loadLeft("mapLabel");
       loadEvent();
     })
-    
+    // NMS
+    $(".btn-mnms").on("click",function(){
+      loadLeft("nms");
+      loadEvent();
+    })
     // 사업관리
     $(".btn-mbusiness").on("click",function(){
       loadLeft("business");
       loadEvent();
     })
-    
+    // 리포트
+    $(".btn-mreport").on("click",function(){
+      loadLeft("report");
+      loadEvent();
+    })
     // 환경설정
     $(".btn-msetting").on("click",function(){
       loadLeft("setting");
@@ -1175,11 +1734,24 @@
       $(".modal-delete").css("display", "block").hide().fadeIn();
       $("body").css("overflow", "hidden");
     })
+    $(".btn-busi-batch").on("click",function(){
+      $("#modal-background").fadeIn(300);
+      $(".modal-busi-reg-batch").css("display", "block").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    })
+    $(".btn-busi-each").on("click",function(){
+      $("#modal-background").fadeIn(300);
+      $(".modal-busi-reg-each").css("display", "block").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    })
     $(".btn-testinput").on("click",function(){
       $(".box-input").css("display", "block");
     })
     $(".click-standard span").on("click",function(){
       $(this).siblings("ul.box-input").toggleClass("active");
+    })
+    $(".go-cancel").on("click",function(){
+      $(this).parents(".active").removeClass("active");
     })
     $(".click-overlap span").on("click",function(){
       $(this).siblings(".content-info").toggleClass("active");

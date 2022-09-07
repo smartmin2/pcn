@@ -61,10 +61,11 @@
 
 @mixin toolbar_images {
   $strnum : "";
-  @for $i from 1 to 20{    
+  @for $i from 1 to 30{    
     @if ($i < 10) { $strnum : 0#{$i}; }
     @else {$strnum : #{$i};}
-    li:nth-child(#{$i+1}){
+    // li:nth-child(#{$i+1}){
+    li.ic-menu-#{$strnum}{
       img {
         content:url(../assets/ic_menu_#{$strnum}@2x.png);
       }      

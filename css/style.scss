@@ -64,11 +64,12 @@
     ul {
       @include flex_center;
       padding: 0 15px;
-      gap: 10px;
+      gap: 15px;
       li {        
         width: 30px;            
         height: 30px;
         @include flex_center;   
+        &:first-child {padding-right: 10px;}
         button {           
           &:hover {cursor: pointer;}
           img {
@@ -85,10 +86,16 @@
       }
 
       &.gnb {         
-        width: 890px; 
+        width: 840px; 
         background: #fff;
 
         @include toolbar_images;
+        
+        .gnb-seperate {
+          height: 15px;
+          width: 1px;
+          background-color: #ddd;
+        }
         
       }
       &.gnb-nav {
@@ -121,7 +128,40 @@
           }
         }
       }
-    }    
+    } 
+    .edit-mode {
+      @include flex_center;       
+      width: 40px;
+      height: 40px;      
+      border-radius: 50px;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      z-index: 100;
+      
+      img {     
+          // cursor: pointer;
+          @include flex_center;       
+          content:url(../assets/ic_menu_07@2x.png);       
+          width: 15px;
+          height: 15px;       
+        }          
+
+        &.active {
+          border: solid 1px #f00;
+          background-color: rgba(255, 0, 0, 0.1);
+        }
+        &.active,&:hover {
+          img {          
+            @include flex_center;         
+            content:url(../assets/ic_menu_07_s@2x.png);         
+            width: 15px;
+            height: 15px;          
+          } 
+        }
+
+        
+    }
+    
   }  
   #left-area {  
     display: none;      
@@ -150,8 +190,9 @@
     padding: 0 20px;
     bottom: 20px;
     left: calc(50% - 220px);
-    z-index: 1;
+    z-index: 10;
     background: #fff;
+    
 
     ul#ticker {
       // @include flex_center;
@@ -207,7 +248,9 @@
   }
   .modal-disconnect{
     width: 530px;
+    z-index: 300;
   }
+  .modal-busi-reg-batch, .modal-busi-reg-each {z-index: 300;}
   .modal-user-m, .modal-pass-m {
     .row {grid-template-columns: 110px 1fr;}
   }
@@ -323,7 +366,7 @@ ul.result-list {
     .item-right {
       @include flex_center;
       gap: 15px;
-      width: 75px;
+      width: 120px;
     }
   }
 }
@@ -357,7 +400,7 @@ ul.result-list {
 }
 // 함체
 .modal-editStandard,.modal-editBit{
-  width: 550px;  
+  width: 730px;  
   .line_conect_con {
     width:100%;height:250px;border:1px solid #d6d6d6;position:relative;
 
@@ -381,6 +424,18 @@ ul.result-list {
     }
   }
 }
+.modal-editLine1, .modal-editLine2 {width: 450px;}
+.modal-report {
+  width: 350px;  
+  .content-edit-wrap {
+    padding: 20px 10px;
+    border: solid 1px #d6d6d6;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
 .modal-register {
   display: none;
   width: 400px;
@@ -388,15 +443,27 @@ ul.result-list {
 }
 .modal-connect {
   display: none;
-  width: 670px;
+  width: 850px;
   // height: 300px;
+  .node-error {
+    width: 100px;
+    height: 24px;    
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #f00;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;    
+  }
+  td > a.btn-insert {margin-left:14px;}
 }
 .modal-business,.modal-history {
   display: none;
   width: 550px;
   // height: 300px;
 }
-.modal-alarm {
+.modal-alarm, .modal-nms {
   display: none;
   width: 760px;
 
@@ -482,8 +549,8 @@ ul.result-list {
     }
   }
 }
-// 지도라벨
-.modal-mapLabel {
+// 지도라벨, 선번장
+.modal-mapLabel, .modal-sunbunjang {
   display: none;
   width: 300px;
 
@@ -492,6 +559,8 @@ ul.result-list {
     .button-sgroup {justify-content: flex-start;}
   }
   .input-main-box {
+    max-height: 521px;
+    overflow-y:overlay;
     padding: 0 14px;
     details {
       summary {
@@ -573,13 +642,132 @@ ul.result-list {
         color: #666;        
         @include flex_center;        
       }
+      .sum-rt-icon {
+        width: 40px;        
+        @include flex_center;  
+        gap: 14px; 
+      }
     }
     summary.f-between > .sum-lt {
       gap: 14px;
     }
   }
 }
-
+// 사업관리 등록
+.modal-busi-register {
+  .table-wrapper {width: 100%;}
+  .row-content.none-data {
+    .table-wrapper {display: none;}
+    &::after {
+      content: "등록된 시설물이 없습니다.";
+      font-size: 12px;
+      color: #333;
+    }
+  }
+}
+.modal-sunView {
+  width: 580px;
+  .content-edit-wrap {
+    height: 110px;
+    margin: 10px 0 0;    
+    padding: 10px 10.8px 10px 10px;
+    border: solid 1px #d6d6d6;
+    background-color: #fff;
+    .node-point-wrap {
+      display: flex;
+      justify-content: space-between;
+      .node-point {
+        flex: 75px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+        position: relative;  
+        .node-point-title {          
+          height: 18px;          
+          font-size: 12px;          
+          color: #111;
+        }      
+        .node-point-circle {
+          width: 18px;
+          height: 18px;
+          border-radius: 100%;
+          background-color: #dfdfdf;
+        }
+        .node-point-info {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          top:calc(100% - 12px); left:calc(50% - 8px);          
+          .node-point-line {
+            width: 70px;
+            height: 25px;
+            margin: 10.5px 0 6.2px 11.3px;
+            border: solid 1px #666;
+            border-top: none;
+          }
+          .node-point-text {
+            font-size: 12px;      
+            margin-left: 11.3px;      
+            text-align: center;
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+}
+.tb-sunbun {  
+  position: relative;  
+  .tb-line {
+    position: absolute;
+    & * {
+      position: absolute;
+    }
+    .core-line1{
+      top: 110px;
+      left: 210px;
+      width: 330px;
+      height: 2px;
+      transform: rotate(23deg);
+      background-color: #ff6c00;
+      font-size: 0;
+    }
+    .core-line2 {
+      top: 80px;
+      left: 225px;
+      width: 300px;
+      height: 2px;
+      background-color: #ff6c00;
+      font-size: 0;
+    }
+    .core-line3 {
+      top: 112px;
+      left: 225px;
+      width: 300px;
+      height: 2px;
+      background-color: #ff6c00;
+      font-size: 0;
+    }
+    .core-line4 {
+      top: 80px;
+      left: 525px;
+      width: 2px;
+      height: 34px;
+      background-color: #ff6c00;
+      font-size: 0;
+    }
+    .core-line5 {
+      top: 144px;
+      left: 225px;
+      width: 300px;
+      height: 2px;
+      background-color: #ff6c00;
+      font-size: 0;
+    }
+  }
+}
 .area_btn{
   width: 26px;
   height: 16px;  

@@ -14,6 +14,9 @@ $("ul.tab-box li").on("click",function(){
   $(this).addClass('active').siblings().removeClass('active');
 })
 
+$(".edit-mode").on("click",function(){
+  $(this).toggleClass('active');   
+})
 //------------------ Modal --------------------------
 $(".modal-open").on('click',function(){
   $("#modal-background").fadeIn(300);
@@ -122,6 +125,11 @@ function loadEvent() {
       $('#right-area').show();      
       $('.modal-user-a').show();      
   })
+  $(".modal-sunbunjang .btn-view").on("click", function(){
+    $('#right-area .right-area-box').children().hide(); 
+    $('#right-area').show();      
+    $('.modal-sunView').show();
+  })
 // modal-input
   $(".modal-input input[name='1']").on("change",function(){
     var ckData = $("input[name='1']:checked").attr("id");	
@@ -212,16 +220,15 @@ function ModalPopup2(sName){
   return false;          
 }
 
-
 // 장애정보 Rolling 
 function ticker() {
   timer = setTimeout(function(){
-    $('#ticker li:first').animate( {marginTop: '-40px'}, 1000, function()
+    $('#ticker li:first').animate( {marginTop: '-40px'}, 2000, function()
     {
       $(this).detach().appendTo('ul#ticker').removeAttr('style');
     });
     ticker();
-  }, 2000);         
+  }, 3000);         
 };           
 
 function tickerover() {
@@ -349,7 +356,9 @@ $('.detail_fac_plus').on("click",function(e){
 	//레이어 팝업 view
 	$(this).parents('.click-standard').siblings('.fac_plus').css({ "z-index":'10000',"top": divTop ,"left": divLeft , "position": "absolute" }).show();
 });
-
+$('.btn-cancel').on("click",function(){
+  $(this).parents('.click-overlap').hide();
+})
 // 범례 타겟 옆에 레이어 팝업 나타내기
 $('.area_btn').mouseenter(function(e){
 	target = $(e.target);
