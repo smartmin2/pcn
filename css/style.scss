@@ -667,7 +667,13 @@ ul.result-list {
 }
 .modal-sunView {
   width: 580px;
+  .modal-body {
+    max-height: 700px;
+    overflow: overlay;
+  }
   .content-edit-wrap {
+    max-width: 550px;
+    overflow-x: overlay;
     height: 110px;
     margin: 10px 0 0;    
     padding: 10px 10.8px 10px 10px;
@@ -675,13 +681,16 @@ ul.result-list {
     background-color: #fff;
     .node-point-wrap {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: nowrap;
+      // flex: 0 0 auto;
+      // justify-content: space-between;
       .node-point {
-        flex: 75px;
+        width: 75px;
         display: flex;
         flex-direction: column;
         gap: 7px;
         align-items: center;
+        flex: 0 0 auto;
         position: relative;  
         .node-point-title {          
           height: 18px;          

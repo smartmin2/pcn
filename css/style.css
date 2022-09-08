@@ -1231,7 +1231,14 @@ ul.result-list li .item-right {
   width: 580px;
 }
 
+.modal-sunView .modal-body {
+  max-height: 700px;
+  overflow: overlay;
+}
+
 .modal-sunView .content-edit-wrap {
+  max-width: 550px;
+  overflow-x: overlay;
   height: 110px;
   margin: 10px 0 0;
   padding: 10px 10.8px 10px 10px;
@@ -1243,15 +1250,12 @@ ul.result-list li .item-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .modal-sunView .content-edit-wrap .node-point-wrap .node-point {
-  -webkit-box-flex: 75px;
-      -ms-flex: 75px;
-          flex: 75px;
+  width: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,6 +1267,9 @@ ul.result-list li .item-right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   position: relative;
 }
 
