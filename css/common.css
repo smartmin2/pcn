@@ -415,7 +415,7 @@ ul.tab-box li:hover {
 }
 
 .modal-wrap .modal-body {
-  overflow: auto;
+  overflow: overlay;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -538,7 +538,7 @@ ul.tab-box li:hover {
   gap: 20px;
 }
 
-.table-wrapper-2h table {
+.table-wrapper-2h .table-inner {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

@@ -178,9 +178,11 @@
               </div>
             </div> 
           </div>
-          <div class="button-group">
-            <button class="btn-white">취소</button>
-            <button class="btn-common btn-save">저장</button>
+          <div class="modal-bottom">
+            <div class="button-group">
+              <button class="btn-white">취소</button>
+              <button class="btn-common btn-save">저장</button>
+            </div>
           </div>
         </div>
         <!-- 입력->연결하기 (UI_04_0007_1)-->
@@ -203,10 +205,10 @@
                       <col style="width: 6%" />
                       <col style="width: 3%" />                        
                       <col style="width: 8%" />
-                      <col style="width: 4%" />
-                      <col style="width: 4%" />
-                      <col style="width: 4%" />
-                      <col style="width: 3%" />
+                      <col style="width: 8%" />
+                      <col style="width: 8%" />
+                      <col style="width: 8%" />
+                      <col style="width: 7%" />
                       <col style="width: 8%" />                        
                       <col style="width: 11.5%" />
                       <col style="width: 6%" />
@@ -233,8 +235,8 @@
                       <tr>
                         <th class="line-bottom">선로ID</th>
                         <th class="line-bottom">규격</th>
-                        <th class="line-bottom">인입선번</th>   
-                        <th class="line-bottom">&nbsp;</th>     
+                        <th class="line-bottom" colspan="2">인입선번</th>   
+                        <!-- <th class="line-bottom">&nbsp;</th>      -->
 
                         <th class="line-bottom">RT인입</th>
                         <th class="line-bottom">NODE</th>
@@ -243,8 +245,8 @@
 
                         <th class="line-bottom">선로ID</th>
                         <th class="line-bottom">규격</th>
-                        <th class="line-bottom">인입선번</th>    
-                        <th class="line-bottom">&nbsp;</th>                      
+                        <th class="line-bottom" colspan="2">인입선번</th>    
+                        <!-- <th class="line-bottom">&nbsp;</th>                       -->
                       </tr>
                     </thead>
                     <tbody>
@@ -455,112 +457,116 @@
                   <button class="btn-common">저장</button>
                 </div>   
                 <div class="table-wrapper-2h">
-                  <table class="jb-table">
-                    <colgroup>
-                      <col width="20%" />
-                      <col width="20%" />
-                      <col width="20%" />
-                      <col width="*" />
-                      <col width="20%" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <!--색상코드는 라인별로-->
-                        <!--
-                    .core4_bgc / .core12_bgc {background-color:#ff6c00}
-                    .core24_bgc / .core36_bgc / .core48_bgc{background-color:#a619ff}
-                    .core72_bgc / .core96_bgc{background-color:#14a419}
-                    .core144_bgc / .core288_bgc{background-color:#ff0000}
-                    .coreel_bgc{background-color:#000000}
-                    .corehole_bgc{background-color:#007aba}
-                    -->
-                        <th colspan="5" class="line-bottom"><span class="cores_bgc"></span>선택선로 ID:97_통신선로</th>
-                      </tr>
-                      <tr>
-                        <th>선로ID</th>
-                        <th>규격</th>
-                        <th>인입선번</th>
-                        <th>RING 정보</th>
-                        <th>연결박스</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">연결완료</a></td>
-                      </tr>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
-                      </tr>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <table class="jb-table">
-                    <colgroup>
-                      <col width="20%" />
-                      <col width="20%" />
-                      <col width="20%" />
-                      <col width="*" />
-                      <col width="20%" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <!--색상코드는 라인별로-->
-                        <!--
-                    .core4_bgc / .core12_bgc {background-color:#ff6c00}
-                    .core24_bgc / .core36_bgc / .core48_bgc{background-color:#a619ff}
-                    .core72_bgc / .core96_bgc{background-color:#14a419}
-                    .core144_bgc / .core288_bgc{background-color:#ff0000}
-                    .coreel_bgc{background-color:#000000}
-                    .corehole_bgc{background-color:#007aba}
-                    -->
-                        <th colspan="5" class="line-bottom"><span class="cores01_bgc"></span>선택선로 ID:97_통신선로</th>
-                      </tr>
-                      <tr>
-                        <th>선로ID</th>
-                        <th>규격</th>
-                        <th>인입선번</th>
-                        <th>RING 정보</th>
-                        <th>연결박스</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
-                      </tr>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
-                      </tr>
-                      <tr>
-                        <td>0</td>
-                        <td>24C</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table-inner">
+                    <table class="jb-table">
+                      <colgroup>
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="*" />
+                        <col width="20%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <!--색상코드는 라인별로-->
+                          <!--
+                      .core4_bgc / .core12_bgc {background-color:#ff6c00}
+                      .core24_bgc / .core36_bgc / .core48_bgc{background-color:#a619ff}
+                      .core72_bgc / .core96_bgc{background-color:#14a419}
+                      .core144_bgc / .core288_bgc{background-color:#ff0000}
+                      .coreel_bgc{background-color:#000000}
+                      .corehole_bgc{background-color:#007aba}
+                      -->
+                          <th colspan="5" class="line-bottom"><span class="cores_bgc"></span>선택선로 ID:97_통신선로</th>
+                        </tr>
+                        <tr>
+                          <th>선로ID</th>
+                          <th>규격</th>
+                          <th>인입선번</th>
+                          <th>RING 정보</th>
+                          <th>연결박스</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">연결완료</a></td>
+                        </tr>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">삽입</a></td>
+                        </tr>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">삽입</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-inner">
+                    <table class="jb-table">
+                      <colgroup>
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="20%" />
+                        <col width="*" />
+                        <col width="20%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <!--색상코드는 라인별로-->
+                          <!--
+                      .core4_bgc / .core12_bgc {background-color:#ff6c00}
+                      .core24_bgc / .core36_bgc / .core48_bgc{background-color:#a619ff}
+                      .core72_bgc / .core96_bgc{background-color:#14a419}
+                      .core144_bgc / .core288_bgc{background-color:#ff0000}
+                      .coreel_bgc{background-color:#000000}
+                      .corehole_bgc{background-color:#007aba}
+                      -->
+                          <th colspan="5" class="line-bottom"><span class="cores01_bgc"></span>선택선로 ID:97_통신선로</th>
+                        </tr>
+                        <tr>
+                          <th>선로ID</th>
+                          <th>규격</th>
+                          <th>인입선번</th>
+                          <th>RING 정보</th>
+                          <th>연결박스</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">삽입</a></td>
+                        </tr>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">삽입</a></td>
+                        </tr>
+                        <tr>
+                          <td>0</td>
+                          <td>24C</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td><a class="btn-insert">삽입</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>             
               </div>
             </div> 
@@ -671,9 +677,11 @@
               </div>
             </div> 
           </div>
-          <div class="button-group">
-            <button class="btn-white">취소</button>
-            <button class="btn-common btn-save">저장</button>
+          <div class="modal-bottom">
+            <div class="button-group">
+              <button class="btn-white">취소</button>
+              <button class="btn-common btn-save">저장</button>
+            </div>
           </div>
         </div>
         <!-- 환경설정->수정 (UI_12_0005)-->

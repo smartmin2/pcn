@@ -334,7 +334,7 @@ ul.tab-box {
     padding: 15px;
   }
   .modal-body {
-    overflow: auto;
+    overflow: overlay;
     flex: 1;
     .input-box {
       ul.tab-box {}
@@ -411,7 +411,7 @@ ul.tab-box {
 .table-wrapper-2h {
   display: flex;
   gap: 20px;
-  table {flex:1;}
+  .table-inner {flex:1;}
 }
 .tb-connect-wrapper {
   padding: 10px;

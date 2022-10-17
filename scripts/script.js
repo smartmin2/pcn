@@ -88,14 +88,14 @@ function loadEvent() {
   $(".modal-edit .btn-add").on("click", function(){   
     $('#right-area .right-area-box').children().hide(); 
       $('#right-area').show();      
-      $('.modal-register').show();
+      $('.modal-register').css("display", "flex");
       // $("body").css("overflow", "hidden");       
   })
   // modal-connect
   $("#btn-connect").on("click",function(){
     $('#right-area .right-area-box').children().hide();
     $('#right-area').show();      
-    $('.modal-connect').show();
+    $('.modal-connect').css("display", "flex")
   })
   // modal-disconnect
   $("#btn-disconnect").on("click",function(){    
