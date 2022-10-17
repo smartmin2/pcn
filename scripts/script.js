@@ -147,6 +147,44 @@ function loadEvent() {
     const tabId = $(this).attr("data-tab"); 
     
     $("#" + tabId).addClass("active").siblings().removeClass('active');
+
+    /***** Canvas ********************/
+    // 상세정보 -> 선번장 -> 도면
+    var lineHeight = $(".line_conect_con").height();
+    var lineWidth = $(".line_conect_con").width();
+    var sx = $(".line_conect_con .icon1").offset().left + $(".line_conect_con .icon1").outerWidth();
+    var ex = $(".line_conect_con .icon2").offset().left;    
+    var lineCanvas = document.getElementById("lineCanvas");
+    if (lineCanvas == null || lineCanvas.getContext == null) return;
+    lineCanvas.height = lineHeight;
+    lineCanvas.width = lineWidth;
+    var line_context_canvas = lineCanvas.getContext("2d");    
+    
+    line_context_canvas.strokeStyle = "#1717fb";
+    line_context_canvas.moveTo(sx-26,123);
+    line_context_canvas.lineTo(ex-26,123);          
+    line_context_canvas.stroke();
+
+    // 상세정보 -> 선번장 테이블의 Canvas
+    var cvHeight = $(".tb-sunbun .jb-table").height();
+    var sbCanvas = document.getElementById("sbCanvas");
+    if (sbCanvas == null || sbCanvas.getContext == null) return;
+    sbCanvas.height = cvHeight;
+    var context_canvas = sbCanvas.getContext("2d");
+    context_canvas.strokeStyle = "#ff6c00";
+    context_canvas.moveTo(0,50);
+    context_canvas.lineTo(0+250*1,50*1);    
+    context_canvas.moveTo(0,50+32);
+    context_canvas.lineTo(0+250*1,50+32*1);  
+    context_canvas.moveTo(0,50+32*2);
+    context_canvas.lineTo(0+250*1,50+32*2);  
+    context_canvas.moveTo(0,50+32*3);
+    context_canvas.lineTo(0+250*1,50+32*3);  
+    context_canvas.moveTo(0,50+32*4);
+    context_canvas.lineTo(0+250*1,50+32*4);  
+    context_canvas.moveTo(0,50+32*5);
+    context_canvas.lineTo(0+250*1,50+32*5);      
+    context_canvas.stroke();
   });
 
   //common
@@ -407,3 +445,5 @@ function toast(string) {
 //       toast('즐겨찾기에 추가 되었습니다.');
 //   }
 // });
+
+

@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .modal-mapLabel {display:flex;}
+  </style>
 </head>
 <body>
-  <div class="modal-mapLabel">
+  <div class="modal-mapLabel modal-wrap">
     <div class="modal-top">
       <div class="box-title">지도</div>
       <div class="ic-modal-close close"></div>
@@ -84,8 +87,14 @@
             <li>
               <input type="checkbox" id="cb12" name="">
               <label for="cb12">                
-                <span class="text"><div class="line_con line-elcore"></div>전기</span>
+                <span class="text"><div class="line_con line-elcore"></div>전기선로</span>
               </label>                  
+            </li>
+            <li>
+              <input type="checkbox" id="cb13" name="">
+              <label for="cb13">                
+                <span class="text"><div class="line_con line-rentcore"></div>임대선로</span>
+              </label>       
             </li>
             <li>
               <input type="checkbox" id="cb13" name="">
@@ -234,7 +243,9 @@
             </li>
           </ul>
         </details>
-      </div>
+      </div>      
+    </div>
+    <div class="modal-bottom">
       <div class="button-group">
         <button class="btn-white">취소</button>
         <button class="btn-common">저장</button>

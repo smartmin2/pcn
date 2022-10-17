@@ -454,7 +454,7 @@
 
 .main-wrapper .top-area .edit-mode.active {
   border: solid 1px #f00;
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: #fbd0d0;
 }
 
 .main-wrapper .top-area .edit-mode.active img, .main-wrapper .top-area .edit-mode:hover img {
@@ -478,9 +478,12 @@
   top: 70px;
   left: 10px;
   z-index: 100;
+  height: 100%;
+  max-height: calc(100% - 140px);
 }
 
 .main-wrapper #left-area .left-area-box {
+  height: 100%;
   background: white;
 }
 
@@ -490,9 +493,12 @@
   top: 70px;
   right: 10px;
   z-index: 100;
+  height: 100%;
+  max-height: calc(100% - 140px);
 }
 
 .main-wrapper #right-area .right-area-box {
+  height: 100%;
   background: white;
 }
 
@@ -695,7 +701,6 @@ ul.result-list {
       -ms-flex-direction: column;
           flex-direction: column;
   max-height: 550px;
-  overflow: overlay;
   border-top: 1px solid #ddd;
 }
 
@@ -812,10 +817,15 @@ ul.result-list li .item-right {
   width: 20px;
   height: 20px;
   background-size: 100%;
+  z-index: 2;
 }
 
 .modal-editStandard .line_conect_con .icon-standard:hover, .modal-editBit .line_conect_con .icon-standard:hover {
-  border: none;
+  border-color: #ff5500;
+}
+
+.modal-editStandard .line_conect_con canvas, .modal-editBit .line_conect_con canvas {
+  z-index: 1;
 }
 
 .modal-editStandard .port-txt, .modal-editBit .port-txt {
@@ -845,6 +855,22 @@ ul.result-list li .item-right {
 
 .modal-editStandard table.port-table:not(:first-child) thead, .modal-editBit table.port-table:not(:first-child) thead {
   border-top: none;
+}
+
+.modal-editStandard .tb-edit-on, .modal-editBit .tb-edit-on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-editStandard .tb-edit-on .select-wrap, .modal-editBit .tb-edit-on .select-wrap {
+  width: 80px;
 }
 
 .modal-editLine1, .modal-editLine2 {
@@ -895,16 +921,14 @@ ul.result-list li .item-right {
 }
 
 .modal-connect td > a.btn-insert {
-  margin-left: 14px;
+  margin: 0 5px;
 }
 
 .modal-business, .modal-history {
-  display: none;
-  width: 550px;
+  width: 730px;
 }
 
 .modal-alarm, .modal-nms {
-  display: none;
   width: 760px;
 }
 
@@ -1050,8 +1074,24 @@ ul.result-list li .item-right {
 }
 
 .modal-mapLabel, .modal-sunbunjang {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 300px;
+  max-height: calc(100vh - 140px);
+}
+
+.modal-mapLabel .modal-body, .modal-sunbunjang .modal-body {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .modal-mapLabel .content-info, .modal-sunbunjang .content-info {
@@ -1318,7 +1358,29 @@ ul.result-list li .item-right {
 }
 
 .tb-sunbun {
+  max-height: 150px;
+  overflow: auto;
   position: relative;
+}
+
+.tb-sunbun .jb-table {
+  border-collapse: separate;
+  /* Don't collapse */
+  border-spacing: 0;
+}
+
+.tb-sunbun .jb-table th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  z-index: 2;
+}
+
+.tb-sunbun .jb-table td {
+  border-bottom: 1px solid #ddd;
 }
 
 .tb-sunbun .tb-line {
@@ -1374,6 +1436,11 @@ ul.result-list li .item-right {
   height: 2px;
   background-color: #ff6c00;
   font-size: 0;
+}
+
+.tb-sunbun #sbCanvas {
+  position: absolute;
+  left: 35%;
 }
 
 .area_btn {
@@ -1679,6 +1746,10 @@ ul.result-list li .item-right {
   background-size: 360px 450px;
 }
 
+.login-wrapper .login-content .password-p {
+  white-space: nowrap;
+}
+
 .login-wrapper .login-content .right-area {
   position: relative;
   -webkit-box-flex: 1;
@@ -1696,7 +1767,6 @@ ul.result-list li .item-right {
 }
 
 .login-wrapper .login-content .right-area .login-title {
-  width: 80px;
   height: 37px;
   font-size: 26px;
   font-weight: 700;
@@ -1745,26 +1815,26 @@ ul.result-list li .item-right {
   background-image: url(../assets/ic_login_pw@2x.png);
 }
 
-.login-wrapper .login-content .right-area .login-input div input[type=text] {
+.login-wrapper .login-content .right-area .login-input div input[type=text], .login-wrapper .login-content .right-area .login-input div input[type=password] {
   outline: none;
   border: none;
   color: #111;
   background-color: transparent;
 }
 
-.login-wrapper .login-content .right-area .login-input div input[type=text]::-webkit-input-placeholder {
+.login-wrapper .login-content .right-area .login-input div input[type=text]::-webkit-input-placeholder, .login-wrapper .login-content .right-area .login-input div input[type=password]::-webkit-input-placeholder {
   color: #dfdfdf;
 }
 
-.login-wrapper .login-content .right-area .login-input div input[type=text]:-ms-input-placeholder {
+.login-wrapper .login-content .right-area .login-input div input[type=text]:-ms-input-placeholder, .login-wrapper .login-content .right-area .login-input div input[type=password]:-ms-input-placeholder {
   color: #dfdfdf;
 }
 
-.login-wrapper .login-content .right-area .login-input div input[type=text]::-ms-input-placeholder {
+.login-wrapper .login-content .right-area .login-input div input[type=text]::-ms-input-placeholder, .login-wrapper .login-content .right-area .login-input div input[type=password]::-ms-input-placeholder {
   color: #dfdfdf;
 }
 
-.login-wrapper .login-content .right-area .login-input div input[type=text]::placeholder {
+.login-wrapper .login-content .right-area .login-input div input[type=text]::placeholder, .login-wrapper .login-content .right-area .login-input div input[type=password]::placeholder {
   color: #dfdfdf;
 }
 
@@ -1841,7 +1911,6 @@ ul.result-list li .item-right {
 }
 
 .modal-favorite {
-  display: none;
   width: 400px;
 }
 

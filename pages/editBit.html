@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* .modal-edit {display:block;} */
+  </style>
 </head>
 <body>
-  <div class="modal-edit modal-editBit">
+  <div class="modal-edit modal-editBit modal-wrap">
     <div class="modal-top">
       <div class="box-title">BIT상세정보</div>
       <div class="ic-modal-close close"></div>
@@ -21,6 +24,7 @@
           <li class="tab-menu" data-tab="tab03">관련자료</li>
           <li class="tab-menu" data-tab="tab04">선번장</li>                    
           <li class="tab-menu" data-tab="tab05">광스위치</li>                    
+          <li class="tab-menu" data-tab="tab06">Ring관리</li>                    
         </ul>    
         <div class="tab-content active" id="tab01">
           <div class="content-info">
@@ -125,6 +129,190 @@
                 <div class="row-content">
                   <input type="text" value />
                 </div>
+              </div>
+            </div>
+          </div>
+          <!-- 수전목록 -->
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>수전목록</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="table-wrapper">
+                <table class="jb-table">
+                  <colgroup>
+                    <col style="width: 40%" />
+                    <col style="width: 30%" />
+                    <col style="width: 30%"/>                    
+                  </colgroup>
+                  <thead>
+                    <tr>                                    
+                      <th>선로ID</th>
+                      <th>규격</th>
+                      <th>연결접속점</th>                      
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>
+          <!-- 경유선로 -->
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>경유선로</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="table-wrapper">
+                <table class="jb-table">
+                  <colgroup>
+                    <col style="width: 40%" />
+                    <col style="width: 30%" />
+                    <col style="width: 30%"/>                    
+                  </colgroup>
+                  <thead>
+                    <tr>                                    
+                      <th>선로ID</th>
+                      <th>규격</th>
+                      <th>연결접속점</th>                      
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>XXXX</td>                      
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>
+                    <!-- 공가선로 -->
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>공가선로 목록</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="table-wrapper">
+                <table class="jb-table">
+                  <colgroup>
+                    <col style="width: 30%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 30%"/>                    
+                  </colgroup>
+                  <thead>
+                    <tr>                                    
+                      <th>선로ID</th>
+                      <th>규격</th>
+                      <th>승인여부</th>
+                      <th>연결접속점</th>                      
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>
+                        <!-- 편집 off인 경우는 tb-edit-on 을 hidden 시키고 데이타텍스트만 넣어주시면 됩니다 -->
+                        <div class="tb-edit-on">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">비승인</option>
+                              <option value="">승인</option>                            
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>
+                        <!-- 편집 off인 경우는 tb-edit-on 을 hidden 시키고 데이타텍스트만 넣어주시면 됩니다 -->
+                        <div class="tb-edit-on">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">비승인</option>
+                              <option value="">승인</option>                            
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>
+                        <!-- 편집 off인 경우는 tb-edit-on 을 hidden 시키고 데이타텍스트만 넣어주시면 됩니다 -->
+                        <div class="tb-edit-on">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">비승인</option>
+                              <option value="">승인</option>                            
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <td>XXXX</td>                      
+                    </tr>
+                    <tr>
+                      <td>XXXX</td>
+                      <td>24C</td>
+                      <td>
+                        <!-- 편집 off인 경우는 tb-edit-on 을 hidden 시키고 데이타텍스트만 넣어주시면 됩니다 -->
+                        <div class="tb-edit-on">
+                          <div class="select-wrap">
+                            <select name="" id="">
+                              <option value="">비승인</option>
+                              <option value="">승인</option>                            
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <td>XXXX</td>                      
+                    </tr>
+                  </tbody>
+                </table> 
               </div>
             </div>
           </div>
@@ -432,17 +620,17 @@
             </div>
             <div class="content-edit-wrap">
               <!--1:0-->
-              <div class="line_conect_con" style="display:none">
+              <div class="line_conect_con">
                 <span>※ 선로를 선택해 주십시오</span>
                 <!--라인-->
-                <div class="icon-standard line-type01-map01">Icon-함체</div>
-                <p class="line-type01-txt01">함체_1075</p>
-
-                <p class="line-type01-txt02">97_통신선로</p>
-                <div class="line-type01-line01">1번라인</div>
-
-                <div class="icon-standard line-type01-map02 active">Icon-함체</div>
-                <p class="line-type01-txt03">함체_1075</p>                           
+                <div class="icon-standard icon1" style="top:calc(50% - 10px); left:calc(50% - 224px);">Icon-함체</div>
+                <p style="top:calc(50% + 10px); left:calc(50% - 266px);">함체_1075</p>
+                <p style="top:calc(50% - 26px); left:calc(50% - 156px);">97_통신선로</p>                
+                <div class="icon-standard icon2 active" style="top:calc(50% - 10px); left:calc(50% - 10px);">Icon-함체</div>
+                <p style="top:calc(50% + 10px); left:calc(50% - 50px);">함체_1075</p>                  
+                
+                <!-- line canvas -->
+                <canvas id="lineCanvas"></canvas>
               </div>
               <!--1:1-->
               <div class="line_conect_con" style="display:none">
@@ -650,7 +838,7 @@
                 <p class="line-type07-txt15">함체_1075</p>
               </div>
               <!--4:4-->
-              <div class="line_conect_con">
+              <div class="line_conect_con" style="display:none">
                 <span>※ 선로를 선택해 주십시오</span>
                 <!--라인-->
                 <div class="icon-standard line-type08-map01">Icon-함체</div>
@@ -714,14 +902,16 @@
               </div>
             </div>
             <div class="content-edit-wrap">
-              <div class="table-wrapper tb-sunbun"> 
-                <div class="tb-line">
+              <div class="table-wrapper tb-sunbun">  
+   
+                <!-- <div class="tb-line">
                   <div class="core-line1"></div>                
                   <div class="core-line2"></div>                
                   <div class="core-line3"></div>                
                   <div class="core-line4"></div>                
                   <div class="core-line5"></div>                
-                </div>               
+                </div>                -->
+                <canvas id="sbCanvas"></canvas>
                 <table class="jb-table">
                   <colgroup>
                     <col width="36px">
@@ -1069,13 +1259,97 @@
               </div>
             </div>
           </div>
-        </div>       
+        </div>  
+        <div class="tab-content" id="tab06">
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>기본정보</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="row">
+                <div class="row-title">Ring명</div>
+                <div class="row-content">
+                  <input type="text" value />
+                  <div class="button-sgroup">                
+                    <button class="btn-type03">추가</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="content-info">
+            <div class="sub-title">
+              <h2>RING LIST</h2>
+            </div>
+            <div class="content-edit-wrap">
+              <div class="table-wrapper">
+                <table class="jb-table">
+                  <colgroup>
+                    <col style="width: 40%" />
+                    <col style="width: 40%" />
+                    <col style="width: 20%" />
+                  </colgroup>
+                  <thead>
+                    <tr>                                    
+                      <th>이름</th>
+                      <th>삭제</th>
+                      <th>시설물보기</th>                      
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td>3-1</td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="delete-btn">삭제</button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="detailview-btn">상세보기</button>
+                        </div>
+                      </td>                      
+                    </tr>
+                    <tr>
+                      <td>3-2</td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="delete-btn">삭제</button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="detailview-btn">상세보기</button>
+                        </div>
+                      </td>                      
+                    </tr>
+                    <tr>
+                      <td>3-3</td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="delete-btn">삭제</button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="f-center">
+                          <button type="button" class="detailview-btn">상세보기</button>
+                        </div>
+                      </td>                      
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>
+        </div>     
       </div>      
+    </div>    
+    <div class="modal-bottom">
       <div class="button-group">
         <button class="btn-white">취소</button>
         <button class="btn-common btn-save">저장</button>
       </div>
-    </div>    
+    </div>
   </div>
   <script src="../scripts/jquery-3.6.0.min.js"></script>
   <script src="../scripts/jquery-ui.min.js"></script>

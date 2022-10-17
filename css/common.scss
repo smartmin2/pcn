@@ -284,7 +284,7 @@ $xy-border: (
 
 // pages
 .modal-top {
-  padding: 0 15px;
+  padding: 15px;
   height: 50px;
   margin-bottom: 14px;
   border-bottom: 2px solid #082e59;
@@ -306,7 +306,7 @@ ul.tab-box {
     font-size: 13px;
     color: #666;
     &.active {
-      font-size: 12px;
+      font-size: 13px;
       border-radius: 16px;
       background-color: #082e59;
       color: #fff;
@@ -325,14 +325,26 @@ ul.tab-box {
   display: block;
 }
 // pages
-.modal-edit {
+.modal-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  .modal-top {    
+    padding: 15px;
+  }
   .modal-body {
+    overflow: auto;
+    flex: 1;
     .input-box {
       ul.tab-box {}
       .tab-content {
 
       }
     }
+  }
+  .modal-bottom {
+    height: 76px;
   }
 }
 .content-info {
@@ -457,10 +469,10 @@ table.jb-table {
       color:#111;
 
       li {
-        &:nth-child(1) {width: 32%;}
-        &:nth-child(2) {width: 26%;}
-        &:nth-child(3) {width: 27%;}
-        &:nth-child(4) {width: 14%;}
+        &:nth-child(1) {width: 44%;}
+        &:nth-child(2) {width: 22%;}
+        &:nth-child(3) {width: 23%;}
+        &:nth-child(4) {width: 10%;}
       }
     }
   }
@@ -1109,7 +1121,8 @@ button.key-btn{
 }
 // a.btn-input-delete{position:absolute;top:9px;right:10px;}
 .btn-insert{
-  width:56px;height:24px; 
+  // width:56px;
+  height:24px; 
   border-radius: 4px; 
   border: solid 1px #ccc; 
   background: #fff url(../assets/ic_bt_insert@2x.png) no-repeat 8px center; 
@@ -1159,6 +1172,9 @@ a.btn-insert{
 
 .line-elcore{border-style:solid;border-color:#000000 !important;}
 .line-elcore_n{border-style: dashed;color:#000000 !important}
+
+.line-rentcore{border-style:solid;border-color:#a2a2a2 !important;}
+.line-rentcore_n{border-style: dashed;color:#a2a2a2 !important}
 
 .line-holecore{border-style:solid;border-color:#1717fb !important;}
 
@@ -1437,7 +1453,7 @@ p[class^='line-type0']{font-size:12px;color:#111;text-align:center}
    transform: rotate(15deg);background-color:#1717fb; font-size:0;}
 
 .line-type06-line02{top:calc(50%);left:calc(50% - 202px);
-  width: 190px; height: 2px;;
+  width: 190px; height: 2px;
   background-color:#666; font-size:0;}   
 
 .line-type06-line03{top:calc(50% + 26px);left:calc(50% - 206px);
@@ -1609,4 +1625,62 @@ span.bit_port_d{background:#818181}
 .map_detail_rect_stdard li{height:40px; font-size:14px; color:#111;border-bottom:1px solid #ddd;padding-left:20px;align-items: center;display: flex;cursor: pointer;}
 .map_detail_rect_stdard li:last-child{border-bottom:0}
 
+
+// icon 정리
+@include icon_images(icon-1-c-t);
+@include icon_images(icon-2-n-g);
+@include icon_images(icon-2-n-r);
+@include icon_images(icon-2-n-t);
+@include icon_images(icon-3-cb-t);
+@include icon_images(icon-4-ke-t);
+@include icon_images(icon-5-tr-t);
+@include icon_images(icon-6-ip-t);
+@include icon_images(icon-7-co-t);
+@include icon_images(icon-8-mh-t);
+@include icon_images(icon-9-me-t);
+@include icon_images(icon-10-m-g);
+@include icon_images(icon-10-m-r);
+@include icon_images(icon-10-m-t);
+@include icon_images(icon-11-t-g);
+@include icon_images(icon-11-t-r);
+@include icon_images(icon-11-t-t);
+@include icon_images(icon-12-ct-g);
+@include icon_images(icon-12-ct-r);
+@include icon_images(icon-12-ct-t);
+@include icon_images(icon-13-vd-g);
+@include icon_images(icon-13-vd-r);
+@include icon_images(icon-13-vd-t);
+@include icon_images(icon-14-dr-g);
+@include icon_images(icon-14-dr-r);
+@include icon_images(icon-14-dr-t);
+@include icon_images(icon-15-tm-g);
+@include icon_images(icon-15-tm-r);
+@include icon_images(icon-15-tm-t);
+@include icon_images(icon-16-vm-g);
+@include icon_images(icon-16-vm-r);
+@include icon_images(icon-16-vm-t);
+@include icon_images(icon-17-av-g);
+@include icon_images(icon-17-av-r);
+@include icon_images(icon-17-av-t);
+@include icon_images(icon-18-vl-g);
+@include icon_images(icon-18-vl-r);
+@include icon_images(icon-18-vl-t);
+@include icon_images(icon-19-md-g);
+@include icon_images(icon-19-md-r);
+@include icon_images(icon-19-md-t);
+@include icon_images(icon-20-wd-g);
+@include icon_images(icon-20-wd-r);
+@include icon_images(icon-20-wd-t);
+@include icon_images(icon-21-rk-g);
+@include icon_images(icon-21-rk-r);
+@include icon_images(icon-21-rk-t);
+@include icon_images(icon-22-rk-g);
+@include icon_images(icon-22-rk-r);
+@include icon_images(icon-22-rk-t);
+@include icon_images(icon-23-b-g);
+@include icon_images(icon-23-b-r);
+@include icon_images(icon-23-b-t);
+@include icon_images(icon-24-t-g);
+@include icon_images(icon-24-t-r);
+@include icon_images(icon-24-t-t);
 

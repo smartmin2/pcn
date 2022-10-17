@@ -124,7 +124,7 @@
     <div id="right-area">
       <div class="right-area-box toolbox">
         <!-- 입력->관련자료->등록 (UI_04_0006_1)-->
-        <div class="modal-register">
+        <div class="modal-register modal-wrap">
           <div class="modal-top">
             <div class="box-title">등록</div>
             <div class="ic-modal-close close"></div>
@@ -184,7 +184,7 @@
           </div>
         </div>
         <!-- 입력->연결하기 (UI_04_0007_1)-->
-        <div class="modal-connect">
+        <div class="modal-connect modal-wrap">
           <div class="modal-top">
             <div class="box-title">연결하기</div>
             <div class="ic-modal-close close"></div>
@@ -198,20 +198,20 @@
                 <div class="table-wrapper tb-connect-wrapper">
                   <table class="jb-table tb-connect-box">
                     <colgroup>
-                      <col style="width: 8.5%" />
-                      <col style="width: 7%" />
-                      <col style="width: 7%" />
-                      <col style="width: 4%" />                        
+                      <col style="width: 11.5%" />
+                      <col style="width: 6%" />
+                      <col style="width: 6%" />
+                      <col style="width: 3%" />                        
                       <col style="width: 8%" />
                       <col style="width: 4%" />
                       <col style="width: 4%" />
                       <col style="width: 4%" />
                       <col style="width: 3%" />
                       <col style="width: 8%" />                        
-                      <col style="width: 8.5%" />
-                      <col style="width: 7%" />
-                      <col style="width: 7%" />
-                      <col style="width: 4%" />
+                      <col style="width: 11.5%" />
+                      <col style="width: 6%" />
+                      <col style="width: 6%" />
+                      <col style="width: 3%" />   
                     </colgroup>
                     <thead>
                       <tr>
@@ -251,7 +251,7 @@
                       <tr>
                         <td colspan="4">
                           <ul class="connect-cell">
-                            <li>0</li>
+                            <li>1523_코어_12</li>
                             <li>24c</li>
                             <li>1</li>
                             <li><a href="#" class="btn-input-delete">삭제</a></li>
@@ -293,7 +293,7 @@
                         <td><div class="connect-line-dash">라인</div></td>
                         <td colspan="4">
                           <ul class="connect-cell">
-                            <li>0</li>
+                            <li>1523_코어_12</li>
                             <li>24c</li>
                             <li>1</li>
                             <li><a href="#" class="btn-input-delete">삭제</a></li>
@@ -490,7 +490,7 @@
                         <td>24C</td>
                         <td>1</td>
                         <td>-</td>
-                        <td><a class="btn-insert">삽입</a></td>
+                        <td><a class="btn-insert">연결완료</a></td>
                       </tr>
                       <tr>
                         <td>0</td>
@@ -567,7 +567,7 @@
           </div>          
         </div>
         <!-- 사업관리->등록 (UI_11_0002)-->
-        <div class="modal-busi-register">
+        <div class="modal-busi-register modal-wrap">
           <div class="modal-top">
             <div class="box-title">등록</div>
             <div class="ic-modal-close close"></div>
@@ -677,7 +677,7 @@
           </div>
         </div>
         <!-- 환경설정->수정 (UI_12_0005)-->
-        <div class="modal-user-m">
+        <div class="modal-user-m modal-wrap">
           <div class="modal-top">
             <div class="box-title">사용자수정</div>
             <div class="ic-modal-close close"></div>
@@ -712,7 +712,7 @@
           </div>
         </div>
         <!-- 환경설정->변경 (UI_12_0006)-->
-        <div class="modal-pass-m">
+        <div class="modal-pass-m modal-wrap">
           <div class="modal-top">
             <div class="box-title">비밀번호 변경</div>
             <div class="ic-modal-close close"></div>
@@ -747,7 +747,7 @@
           </div>
         </div>
         <!-- 환경설정->변경 (UI_12_0007)-->
-        <div class="modal-user-a">
+        <div class="modal-user-a modal-wrap">
           <div class="modal-top">
             <div class="box-title">회원추가</div>
             <div class="ic-modal-close close"></div>
@@ -788,7 +788,7 @@
           </div>
         </div>
         <!-- 입력->(UI_04_0002) : 함체상세정보-->
-        <div class="modal-input-standard">
+        <div class="modal-input-standard modal-wrap">
           <div class="modal-top">
             <div class="box-title">함체상세정보</div>
             <div class="ic-modal-close close"></div>
@@ -820,7 +820,7 @@
           </div>
         </div>
         <!-- 선번장->보기 (UI_09_0002)-->
-        <div class="modal-sunView">
+        <div class="modal-sunView modal-wrap">
           <div class="modal-top">
             <div class="box-title">선번장 보기</div>
             <div class="ic-modal-close close"></div>
@@ -1236,7 +1236,7 @@
                     <th>위치</th>
                     <th>
                       <div class="f-center">
-                        <input type="checkbox" name="" id="">
+                        <input type="" name="" id="">
                       </div>
                     </th>
                   </tr>
@@ -1646,9 +1646,8 @@
     })
     //편집
     $(".go-input,.go_modal_standard").on("click",function(){
-      // 함체-editStandard, BIT-editBit, CCTV-editCctv, 신호제어기-editTraffic, TR-editTR, 맨홀-editManhole,
-      // 전주-editPole, 국사-editTelephone, 통신선로-edit4core, 전기선로-editElcore, 관로-editHole    
-      loadLeft("editBit");
+      // 함체-editStandard, BIT-editBit, 통신선로-editLine1, 전기선로-editLine2
+      loadLeft("editBit"); // 이부분만 변경하면 해당 모달창이 뜸.
       loadEvent();
       $(".box-input").removeClass("active");
     })
