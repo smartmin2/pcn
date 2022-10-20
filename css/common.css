@@ -1942,6 +1942,22 @@ p[class^='line-type0'] {
   text-align: center;
 }
 
+.line-base {
+  cursor: pointer;
+  height: 2px;
+  background-color: #666;
+}
+
+.line-blue {
+  height: 4px !important;
+  background-color: #1717fb !important;
+}
+
+.line-orange {
+  height: 4px !important;
+  background-color: #ff5500 !important;
+}
+
 .line-type01-map01 {
   top: calc(50% - 10px);
   left: calc(50% - 224px);
@@ -1979,8 +1995,8 @@ p[class^='line-type0'] {
   top: calc(50% - 2px);
   left: calc(50% - 206px);
   width: 196px;
-  height: 4px;
-  background-color: #1717fb;
+  height: 2px;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2039,8 +2055,8 @@ p[class^='line-type0'] {
   top: calc(50% - 2px);
   left: calc(50% - 206px);
   width: 196px;
-  height: 4px;
-  background-color: #1717fb;
+  height: 2px;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2048,8 +2064,8 @@ p[class^='line-type0'] {
   top: calc(50% - 2px);
   left: calc(50% + 10px);
   width: 196px;
-  height: 4px;
-  background-color: #ff5500;
+  height: 2px;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2129,8 +2145,8 @@ p[class^='line-type0'] {
   top: calc(50% - 2px);
   left: calc(50% - 206px);
   width: 196px;
-  height: 4px;
-  background-color: #1717fb;
+  height: 2px;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2138,10 +2154,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% + 6px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2253,10 +2269,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% - 206px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  background-color: #1717fb;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2275,10 +2291,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% + 6px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2407,10 +2423,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% - 206px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  background-color: #1717fb;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2429,10 +2445,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% + 6px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2587,10 +2603,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% - 206px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  background-color: #1717fb;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2618,10 +2634,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% + 6px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2797,10 +2813,10 @@ p[class^='line-type0'] {
   top: calc(50% - 28px);
   left: calc(50% - 206px);
   width: 200px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  background-color: #1717fb;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -2828,10 +2844,10 @@ p[class^='line-type0'] {
   top: calc(50% - 38px);
   left: calc(50% + 4px);
   width: 205px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -3041,10 +3057,10 @@ p[class^='line-type0'] {
   top: calc(50% - 36px);
   left: calc(50% - 208px);
   width: 205px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
-  background-color: #1717fb;
+  background-color: #666;
   font-size: 0;
 }
 
@@ -3085,10 +3101,10 @@ p[class^='line-type0'] {
   top: calc(50% - 36px);
   left: calc(50% + 4px);
   width: 205px;
-  height: 4px;
+  height: 2px;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
-  background-color: #ff5500;
+  background-color: #666;
   font-size: 0;
 }
 

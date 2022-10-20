@@ -150,20 +150,20 @@ function loadEvent() {
 
     /***** Canvas ********************/
     // 상세정보 -> 선번장 -> 도면
-    var lineHeight = $(".line_conect_con").height();
-    var lineWidth = $(".line_conect_con").width();
-    var sx = $(".line_conect_con .icon1").offset().left + $(".line_conect_con .icon1").outerWidth();
-    var ex = $(".line_conect_con .icon2").offset().left;    
-    var lineCanvas = document.getElementById("lineCanvas");
-    if (lineCanvas == null || lineCanvas.getContext == null) return;
-    lineCanvas.height = lineHeight;
-    lineCanvas.width = lineWidth;
-    var line_context_canvas = lineCanvas.getContext("2d");    
+    // var lineHeight = $(".line_conect_con").height();
+    // var lineWidth = $(".line_conect_con").width();
+    // var sx = $(".line_conect_con .icon1").offset().left + $(".line_conect_con .icon1").outerWidth();
+    // var ex = $(".line_conect_con .icon2").offset().left;    
+    // var lineCanvas = document.getElementById("lineCanvas");
+    // if (lineCanvas == null || lineCanvas.getContext == null) return;
+    // lineCanvas.height = lineHeight;
+    // lineCanvas.width = lineWidth;
+    // var line_context_canvas = lineCanvas.getContext("2d");    
     
-    line_context_canvas.strokeStyle = "#1717fb";
-    line_context_canvas.moveTo(sx-26,123);
-    line_context_canvas.lineTo(ex-26,123);          
-    line_context_canvas.stroke();
+    // line_context_canvas.strokeStyle = "#1717fb";
+    // line_context_canvas.moveTo(sx-26,123);
+    // line_context_canvas.lineTo(ex-26,123);          
+    // line_context_canvas.stroke();
 
     // 상세정보 -> 선번장 테이블의 Canvas
     var cvHeight = $(".tb-sunbun .jb-table").height();
@@ -224,6 +224,14 @@ $('.area_btn').on("mouseleave",function(e){
     $(this).addClass('active').siblings().removeClass('active');
   })
 
+  $('.line-base').on('click', function(e){
+    var strLine = e.currentTarget.innerText;
+    var num = strLine.replace(/[^0-9]/g,'');
+    if ($(this).hasClass('line-blue')) $(this).removeClass('line-blue');
+    else if ($(this).hasClass('line-orange')) $(this).removeClass('line-orange');    
+    else if (num%2 == 0) $(this).addClass('line-blue');
+    else $(this).addClass('line-orange');  
+  })
 }
 
 function loadRight(sName){  

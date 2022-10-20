@@ -476,6 +476,32 @@ ul.result-list {
   // display: none;
   width: 730px;  
   // height: 300px;  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+
+    .content-info {
+      margin: 20px 0 0;
+    }
+    .content-info:nth-child(2) {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      .content-edit-wrap {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+
+        .table-wrapper {
+          overflow: overlay;
+          flex: 1;
+        }
+      }
+    }
+  }
 }
 .modal-alarm, .modal-nms {
   // display: none;
