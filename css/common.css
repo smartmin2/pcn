@@ -652,6 +652,10 @@ table.jb-table .padding-right-6px {
   padding-right: 6px;
 }
 
+table.jb-table .padding-left-6px {
+  padding-left: 6px;
+}
+
 table.jb-table .th-no-cell {
   border-top-color: #fff;
   background: #fff;
