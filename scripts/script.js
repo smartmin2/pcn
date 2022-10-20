@@ -69,15 +69,15 @@ function loadLeft(sName){
 // modal Event
 function loadEvent() {
   // modal-search
-  $(".modal-search ul.tab-box li").on("click",function(){    
-    var idx = $(this).index();
+  // $(".modal-search ul.tab-box li").on("click",function(){    
+  //   var idx = $(this).index();
     
-    $('.modal-search ul.result-list li').each(function (index, item) {
-      if (idx == 0) $(this).css('display','flex');
-      else if (idx-1 == (index%4)) $(this).css('display','flex');
-      else  $(this).css('display','none');
-    });	
-  })
+  //   $('.modal-search ul.result-list li').each(function (index, item) {
+  //     if (idx == 0) $(this).css('display','flex');
+  //     else if (idx-1 == (index%4)) $(this).css('display','flex');
+  //     else  $(this).css('display','none');
+  //   });	
+  // })
 
   $(".modal-search .btn-search").on("click",function(){
     $(".modal-search .result-box").css("display","block");

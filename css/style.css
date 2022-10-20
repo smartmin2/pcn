@@ -692,6 +692,13 @@
   margin: 10px 0;
 }
 
+.modal-search .modal-body .result-box .select-box ul.tab-box {
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 5px;
+}
+
 ul.result-list {
   display: -webkit-box;
   display: -ms-flexbox;
