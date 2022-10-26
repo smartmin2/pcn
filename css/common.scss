@@ -337,9 +337,11 @@ ul.tab-box {
     overflow: overlay;
     flex: 1;
     .input-box {
+      height: 100%;
       ul.tab-box {}
       .tab-content {
-
+        max-height: calc(100% - 46px);
+        overflow: overlay;
       }
     }
   }

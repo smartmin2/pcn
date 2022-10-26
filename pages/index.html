@@ -1661,10 +1661,10 @@
     })
     //입력
     $(".btn-minput").on("click",function(){
-      if ($(".btn-medit").parents("li").hasClass("active")){
+      // if ($(".btn-medit").parents("li").hasClass("active")){
         loadLeft("input");
         loadEvent();
-      } else $(".error-box").show();
+      // } else $(".error-box").show();
     })
     $(".btn-medit").on("click",function(){
       if ($(this).hasClass("active") == false)

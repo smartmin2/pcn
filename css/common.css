@@ -421,6 +421,15 @@ ul.tab-box li:hover {
           flex: 1;
 }
 
+.modal-wrap .modal-body .input-box {
+  height: 100%;
+}
+
+.modal-wrap .modal-body .input-box .tab-content {
+  max-height: calc(100% - 46px);
+  overflow: overlay;
+}
+
 .modal-wrap .modal-bottom {
   height: 76px;
 }

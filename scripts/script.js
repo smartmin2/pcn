@@ -80,7 +80,7 @@ function loadEvent() {
   // })
 
   $(".modal-search .btn-search").on("click",function(){
-    $(".modal-search .result-box").css("display","block");
+    $(".modal-search .result-box").css("display","flex");
     $(".modal-search .no-data").removeClass("active");
   })
   
