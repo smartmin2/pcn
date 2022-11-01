@@ -268,20 +268,20 @@ function ModalPopup2(sName){
 
 // 장애정보 Rolling 
 function ticker() {
-  timer = setTimeout(function(){
-    $('#ticker li:first').animate( {marginTop: '-40px'}, 2000, function()
+  timer = setInterval(function(){
+    $('#ticker li:first').stop().animate( {marginTop: '-40px'}, 2000, function()
     {
       $(this).detach().appendTo('ul#ticker').removeAttr('style');
-    });
-    ticker();
+    });    
   }, 3000);         
 };           
 
 function tickerover() {
-  $('#ticker').mouseover(function(){
-    clearTimeout(timer);
+  $('#ticker').mouseover(function(){    
+    clearInterval(timer);
   });
   $('#ticker').mouseout(function(){
+    clearInterval(timer);
     ticker();
   });  
 };
