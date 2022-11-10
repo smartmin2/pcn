@@ -2078,6 +2078,11 @@ ul.box-input li {
   display: block;
 }
 
+.click-overlap .content-info .content-edit-wrap {
+  height: calc(100% - 44px);
+  overflow: overlay;
+}
+
 .click-overlap .content-info table td {
   text-decoration: underline;
 }

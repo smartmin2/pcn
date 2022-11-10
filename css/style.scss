@@ -1156,6 +1156,10 @@ ul.box-input {
     &.active {
       display: block;
     }
+    .content-edit-wrap {
+      height: calc(100% - 44px);
+      overflow: overlay;  
+    }
     table td {text-decoration: underline;}
   }
   .line_con{width: 21px;}
